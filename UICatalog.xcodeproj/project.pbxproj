@@ -10,6 +10,10 @@
 		B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B1D1D6541DE00973ED5 /* CollectionView.storyboard */; };
 		B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B201D65423600973ED5 /* GridCollectionViewController.swift */; };
 		B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */; };
+		B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B251D6548B400973ED5 /* PageView.storyboard */; };
+		B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B281D65495300973ED5 /* ScrollPagingViewController.swift */; };
+		B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B2A1D654AF000973ED5 /* ScrollPagingViewDataSource.swift */; };
+		B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -46,6 +50,10 @@
 		B1235B1E1D6541DE00973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CollectionView.storyboard; sourceTree = "<group>"; };
 		B1235B201D65423600973ED5 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridCollectionViewController.swift; path = CollectionView/GridCollectionViewController.swift; sourceTree = "<group>"; };
 		B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridCollectionViewCell.swift; path = CollectionView/GridCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1235B261D6548B400973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PageView.storyboard; sourceTree = "<group>"; };
+		B1235B281D65495300973ED5 /* ScrollPagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollPagingViewController.swift; path = PageView/ScrollPagingViewController.swift; sourceTree = "<group>"; };
+		B1235B2A1D654AF000973ED5 /* ScrollPagingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollPagingViewDataSource.swift; path = PageView/ScrollPagingViewDataSource.swift; sourceTree = "<group>"; };
+		B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = PageView/PageContentViewController.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,17 @@
 			name = CollectionView;
 			sourceTree = "<group>";
 		};
+		B1235B241D65485900973ED5 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B251D6548B400973ED5 /* PageView.storyboard */,
+				B1235B281D65495300973ED5 /* ScrollPagingViewController.swift */,
+				B1235B2A1D654AF000973ED5 /* ScrollPagingViewDataSource.swift */,
+				B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */,
+			);
+			name = PageView;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +147,7 @@
 				B16BB9CB1D13AEC2007BA1CF /* Article */,
 				B16BB9C61D13AB97007BA1CF /* TableView */,
 				B1235B1C1D6541A000973ED5 /* CollectionView */,
+				B1235B241D65485900973ED5 /* PageView */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -282,6 +302,7 @@
 			files = (
 				B16BB9A01D13AA46007BA1CF /* LaunchScreen.storyboard in Resources */,
 				B16BB99D1D13AA46007BA1CF /* Assets.xcassets in Resources */,
+				B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */,
 				B16BB9C51D13AB91007BA1CF /* TableView.storyboard in Resources */,
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
@@ -314,10 +335,13 @@
 				B16BB9CF1D13AF97007BA1CF /* Article.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
+				B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */,
+				B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */,
 				B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */,
 				B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
+				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +383,14 @@
 				B1235B1E1D6541DE00973ED5 /* Base */,
 			);
 			name = CollectionView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1235B251D6548B400973ED5 /* PageView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1235B261D6548B400973ED5 /* Base */,
+			);
+			name = PageView.storyboard;
 			sourceTree = "<group>";
 		};
 		B16BB9991D13AA46007BA1CF /* Main.storyboard */ = {

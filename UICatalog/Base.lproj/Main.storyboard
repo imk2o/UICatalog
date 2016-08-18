@@ -480,6 +480,14 @@
             </objects>
             <point key="canvasLocation" x="-366" y="-372"/>
         </scene>
+        <!--ScrollPagingView-->
+        <scene sceneID="mNi-dw-eKb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PageView" referencedIdentifier="ScrollPagingView" id="tuB-dz-MXk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohn-gd-HJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.5" y="-376"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="u0A-aO-mg6">
             <objects>
@@ -670,6 +678,30 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Jlb-wF-Mwz" kind="show" id="Led-7E-xbE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Page View" id="3tk-zA-Xzp">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vUi-I2-s5H" style="IBUITableViewCellStyleDefault" id="cw9-3W-l16">
+                                        <rect key="frame" x="0.0" y="301.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cw9-3W-l16" id="BMh-vG-jLf">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scroll Paging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vUi-I2-s5H">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tuB-dz-MXk" kind="show" id="tgo-zL-wuN"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
