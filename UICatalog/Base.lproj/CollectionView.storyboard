@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Grid Collection View-->
+        <scene sceneID="ify-fG-gjo">
+            <objects>
+                <viewController storyboardIdentifier="GridCollectionView" id="9uu-vC-6qs" customClass="GridCollectionViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fn5-fE-HR6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mxp-KT-6Gp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62D-xe-PgI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-qi-TG6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zCb-hs-tpA">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="P8W-4K-5Nf" customClass="GridCollectionViewCell" customModule="UICatalog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-MZ-MsI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ow6-MZ-MsI" secondAttribute="trailing" id="5hj-nC-QmK"/>
+                                            <constraint firstAttribute="bottom" secondItem="ow6-MZ-MsI" secondAttribute="bottom" id="fSG-Es-DSu"/>
+                                            <constraint firstItem="ow6-MZ-MsI" firstAttribute="leading" secondItem="P8W-4K-5Nf" secondAttribute="leading" id="ffU-v8-pgx"/>
+                                            <constraint firstItem="ow6-MZ-MsI" firstAttribute="top" secondItem="P8W-4K-5Nf" secondAttribute="top" id="lpo-bY-gEb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="ow6-MZ-MsI" id="7l2-Mq-wZ8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="mOA-kK-Uzw">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection Viewを選択し、Attributes Inspectorの&quot;Section Header&quot;をオンにしてヘッダを追加" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDp-kZ-UWN">
+                                            <rect key="frame" x="8" y="8" width="584" height="34"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="sDp-kZ-UWN" firstAttribute="leading" secondItem="mOA-kK-Uzw" secondAttribute="leading" constant="8" id="306-0O-YWN"/>
+                                        <constraint firstItem="sDp-kZ-UWN" firstAttribute="top" secondItem="mOA-kK-Uzw" secondAttribute="top" constant="8" id="Be6-uB-2z0"/>
+                                        <constraint firstAttribute="trailing" secondItem="sDp-kZ-UWN" secondAttribute="trailing" constant="8" id="HmK-2t-L4B"/>
+                                        <constraint firstAttribute="bottom" secondItem="sDp-kZ-UWN" secondAttribute="bottom" constant="8" id="tjg-vZ-nej"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="9uu-vC-6qs" id="ZWP-TA-gUH"/>
+                                    <outlet property="delegate" destination="9uu-vC-6qs" id="ojS-MN-HkF"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mxp-KT-6Gp" firstAttribute="top" secondItem="3FU-qi-TG6" secondAttribute="bottom" id="MBE-l2-rc8"/>
+                            <constraint firstAttribute="trailing" secondItem="3FU-qi-TG6" secondAttribute="trailing" id="MuP-0q-dEz"/>
+                            <constraint firstItem="3FU-qi-TG6" firstAttribute="top" secondItem="62D-xe-PgI" secondAttribute="top" id="Pdb-vV-Ip4"/>
+                            <constraint firstItem="3FU-qi-TG6" firstAttribute="leading" secondItem="62D-xe-PgI" secondAttribute="leading" id="zKe-Kh-mGO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grid Collection View" id="rKH-3y-3Dd"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3FU-qi-TG6" id="AIf-Ar-tYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Naw-3d-CKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="331"/>
+        </scene>
+    </scenes>
+</document>
