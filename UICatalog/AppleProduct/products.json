@@ -1,0 +1,46 @@
+{
+    "1": {
+        "name": "iMac",
+        "category": "Mac"
+    },
+    "2": {
+        "name": "MacBook",
+        "category": "Mac"
+    },
+    "3": {
+        "name": "MacBook Pro",
+        "category": "Mac"
+    },
+    "4": {
+        "name": "MacBook Air",
+        "category": "Mac"
+    },
+    "5": {
+        "name": "Mac Pro",
+        "category": "Mac"
+    },
+    "6": {
+        "name": "Mac mini",
+        "category": "Mac"
+    },
+    "7": {
+        "name": "iPhone 6s",
+        "category": "iPhone"
+    },
+    "8": {
+        "name": "iPhone 6s Plus",
+        "category": "iPhone"
+    },
+    "9": {
+        "name": "iPhone SE",
+        "category": "iPhone"
+    },
+    "10": {
+        "name": "iPad Pro",
+        "category": "iPad"
+    },
+    "11": {
+        "name": "iPad mini",
+        "category": "iPad"
+    }
+}

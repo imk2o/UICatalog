@@ -20,6 +20,12 @@
 		B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */; };
 		B1235B3C1D668F0900973ED5 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B3B1D668F0900973ED5 /* WebView.storyboard */; };
 		B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B3D1D668F6E00973ED5 /* UIWebViewController.swift */; };
+		B1235B421D66989500973ED5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B401D66989500973ED5 /* Search.storyboard */; };
+		B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B431D66992A00973ED5 /* SearchViewController.swift */; };
+		B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B461D66998800973ED5 /* AppleProduct.swift */; };
+		B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B481D66999E00973ED5 /* AppleProductProvider.swift */; };
+		B1235B4B1D669AEC00973ED5 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B1235B4A1D669AEC00973ED5 /* products.json */; };
+		B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -66,6 +72,12 @@
 		B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchChildrenViewController.swift; path = ChildView/SwitchChildrenViewController.swift; sourceTree = "<group>"; };
 		B1235B3B1D668F0900973ED5 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = WebView/WebView.storyboard; sourceTree = "<group>"; };
 		B1235B3D1D668F6E00973ED5 /* UIWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWebViewController.swift; path = WebView/UIWebViewController.swift; sourceTree = "<group>"; };
+		B1235B411D66989500973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
+		B1235B431D66992A00973ED5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Search/SearchViewController.swift; sourceTree = "<group>"; };
+		B1235B461D66998800973ED5 /* AppleProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleProduct.swift; path = AppleProduct/AppleProduct.swift; sourceTree = "<group>"; };
+		B1235B481D66999E00973ED5 /* AppleProductProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleProductProvider.swift; path = AppleProduct/AppleProductProvider.swift; sourceTree = "<group>"; };
+		B1235B4A1D669AEC00973ED5 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = AppleProduct/products.json; sourceTree = "<group>"; };
+		B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewDataSource.swift; path = Search/SearchViewDataSource.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +172,26 @@
 			name = WebView;
 			sourceTree = "<group>";
 		};
+		B1235B3F1D66987200973ED5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B401D66989500973ED5 /* Search.storyboard */,
+				B1235B431D66992A00973ED5 /* SearchViewController.swift */,
+				B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		B1235B451D66996E00973ED5 /* AppleProduct */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B461D66998800973ED5 /* AppleProduct.swift */,
+				B1235B481D66999E00973ED5 /* AppleProductProvider.swift */,
+				B1235B4A1D669AEC00973ED5 /* products.json */,
+			);
+			name = AppleProduct;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -183,13 +215,15 @@
 		B16BB9941D13AA46007BA1CF /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
+				B1235B451D66996E00973ED5 /* AppleProduct */,
 				B16BB9CB1D13AEC2007BA1CF /* Article */,
-				B16BB9C61D13AB97007BA1CF /* TableView */,
-				B1235B1C1D6541A000973ED5 /* CollectionView */,
 				B1235B241D65485900973ED5 /* PageView */,
 				B1235B2E1D66867B00973ED5 /* Alert */,
 				B1235B341D66896500973ED5 /* ChildView */,
+				B16BB9C61D13AB97007BA1CF /* TableView */,
+				B1235B1C1D6541A000973ED5 /* CollectionView */,
 				B1235B3A1D668ECD00973ED5 /* WebView */,
+				B1235B3F1D66987200973ED5 /* Search */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -349,7 +383,9 @@
 				B16BB9C51D13AB91007BA1CF /* TableView.storyboard in Resources */,
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
+				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
+				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
 				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
 			);
@@ -376,6 +412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */,
+				B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */,
+				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
 				B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */,
 				B16BB9CF1D13AF97007BA1CF /* Article.swift in Sources */,
@@ -388,6 +427,7 @@
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
+				B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
 				B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */,
 			);
@@ -455,6 +495,14 @@
 				B1235B361D66897C00973ED5 /* Base */,
 			);
 			name = ChildView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1235B401D66989500973ED5 /* Search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1235B411D66989500973ED5 /* Base */,
+			);
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 		B16BB9991D13AA46007BA1CF /* Main.storyboard */ = {
