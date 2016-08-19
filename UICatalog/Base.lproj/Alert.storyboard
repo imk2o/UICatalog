@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Alert-->
+        <scene sceneID="aMg-JP-Ejq">
+            <objects>
+                <viewController storyboardIdentifier="AlertAndActionSheetView" id="rAV-OT-vhR" customClass="AlertAndActionSheetViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YhR-sm-Una"/>
+                        <viewControllerLayoutGuide type="bottom" id="DGx-Gd-BUH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2kf-e7-75B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJb-I5-EFa">
+                                <rect key="frame" x="284" y="72" width="33" height="30"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="alertButtonDidTap:" destination="rAV-OT-vhR" eventType="touchUpInside" id="EvK-Ra-amf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYH-yo-xlO">
+                                <rect key="frame" x="256" y="110" width="88" height="30"/>
+                                <state key="normal" title="Action Sheet"/>
+                                <connections>
+                                    <action selector="actionSheetButtonDidTap:" destination="rAV-OT-vhR" eventType="touchUpInside" id="ZHR-jF-Yx6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nYH-yo-xlO" firstAttribute="top" secondItem="nJb-I5-EFa" secondAttribute="bottom" constant="8" id="3F0-St-o7G"/>
+                            <constraint firstItem="nYH-yo-xlO" firstAttribute="centerX" secondItem="2kf-e7-75B" secondAttribute="centerX" id="Mxo-RN-k1q"/>
+                            <constraint firstItem="nJb-I5-EFa" firstAttribute="centerX" secondItem="2kf-e7-75B" secondAttribute="centerX" id="bgr-uh-iaL"/>
+                            <constraint firstItem="nJb-I5-EFa" firstAttribute="top" secondItem="YhR-sm-Una" secondAttribute="bottom" constant="8" id="n5L-Fx-LmQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alert" id="U0J-6e-QZ8"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIt-fE-DrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="98"/>
+        </scene>
+    </scenes>
+</document>

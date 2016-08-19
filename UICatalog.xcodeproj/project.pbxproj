@@ -14,6 +14,8 @@
 		B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B281D65495300973ED5 /* ScrollPagingViewController.swift */; };
 		B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B2A1D654AF000973ED5 /* ScrollPagingViewDataSource.swift */; };
 		B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */; };
+		B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B2F1D6686B100973ED5 /* Alert.storyboard */; };
+		B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		B1235B281D65495300973ED5 /* ScrollPagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollPagingViewController.swift; path = PageView/ScrollPagingViewController.swift; sourceTree = "<group>"; };
 		B1235B2A1D654AF000973ED5 /* ScrollPagingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollPagingViewDataSource.swift; path = PageView/ScrollPagingViewDataSource.swift; sourceTree = "<group>"; };
 		B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = PageView/PageContentViewController.swift; sourceTree = "<group>"; };
+		B1235B301D6686B100973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alert.storyboard; sourceTree = "<group>"; };
+		B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertAndActionSheetViewController.swift; path = Alert/AlertAndActionSheetViewController.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 			name = PageView;
 			sourceTree = "<group>";
 		};
+		B1235B2E1D66867B00973ED5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B2F1D6686B100973ED5 /* Alert.storyboard */,
+				B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 				B16BB9C61D13AB97007BA1CF /* TableView */,
 				B1235B1C1D6541A000973ED5 /* CollectionView */,
 				B1235B241D65485900973ED5 /* PageView */,
+				B1235B2E1D66867B00973ED5 /* Alert */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -307,6 +321,7 @@
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
+				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +357,7 @@
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
+				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +407,14 @@
 				B1235B261D6548B400973ED5 /* Base */,
 			);
 			name = PageView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1235B2F1D6686B100973ED5 /* Alert.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1235B301D6686B100973ED5 /* Base */,
+			);
+			name = Alert.storyboard;
 			sourceTree = "<group>";
 		};
 		B16BB9991D13AA46007BA1CF /* Main.storyboard */ = {

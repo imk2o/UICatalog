@@ -480,13 +480,21 @@
             </objects>
             <point key="canvasLocation" x="-366" y="-372"/>
         </scene>
+        <!--AlertAndActionSheetView-->
+        <scene sceneID="Hal-G5-GIH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alert" referencedIdentifier="AlertAndActionSheetView" id="iNP-j4-Nsi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPN-77-jhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.5" y="-372"/>
+        </scene>
         <!--ScrollPagingView-->
         <scene sceneID="mNi-dw-eKb">
             <objects>
                 <viewControllerPlaceholder storyboardName="PageView" referencedIdentifier="ScrollPagingView" id="tuB-dz-MXk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohn-gd-HJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130.5" y="-376"/>
+            <point key="canvasLocation" x="-174" y="-372"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="u0A-aO-mg6">
@@ -702,6 +710,30 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="tuB-dz-MXk" kind="show" id="tgo-zL-wuN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Alert" id="rhb-5J-J8p">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Bfb-Ed-PwN" style="IBUITableViewCellStyleDefault" id="Dbv-sy-ywa">
+                                        <rect key="frame" x="0.0" y="395.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dbv-sy-ywa" id="MK8-2x-Cxe">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfb-Ed-PwN">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iNP-j4-Nsi" kind="show" id="0ql-zm-O4n"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
