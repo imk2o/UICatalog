@@ -16,6 +16,8 @@
 		B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */; };
 		B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B2F1D6686B100973ED5 /* Alert.storyboard */; };
 		B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */; };
+		B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B351D66897C00973ED5 /* ChildView.storyboard */; };
+		B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		B1235B2C1D654B5C00973ED5 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = PageView/PageContentViewController.swift; sourceTree = "<group>"; };
 		B1235B301D6686B100973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alert.storyboard; sourceTree = "<group>"; };
 		B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertAndActionSheetViewController.swift; path = Alert/AlertAndActionSheetViewController.swift; sourceTree = "<group>"; };
+		B1235B361D66897C00973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChildView.storyboard; sourceTree = "<group>"; };
+		B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchChildrenViewController.swift; path = ChildView/SwitchChildrenViewController.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			name = Alert;
 			sourceTree = "<group>";
 		};
+		B1235B341D66896500973ED5 /* ChildView */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B351D66897C00973ED5 /* ChildView.storyboard */,
+				B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */,
+			);
+			name = ChildView;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 				B1235B1C1D6541A000973ED5 /* CollectionView */,
 				B1235B241D65485900973ED5 /* PageView */,
 				B1235B2E1D66867B00973ED5 /* Alert */,
+				B1235B341D66896500973ED5 /* ChildView */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -321,6 +335,7 @@
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
+				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +373,7 @@
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
+				B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +431,14 @@
 				B1235B301D6686B100973ED5 /* Base */,
 			);
 			name = Alert.storyboard;
+			sourceTree = "<group>";
+		};
+		B1235B351D66897C00973ED5 /* ChildView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1235B361D66897C00973ED5 /* Base */,
+			);
+			name = ChildView.storyboard;
 			sourceTree = "<group>";
 		};
 		B16BB9991D13AA46007BA1CF /* Main.storyboard */ = {
