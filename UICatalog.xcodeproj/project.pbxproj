@@ -18,6 +18,8 @@
 		B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */; };
 		B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B351D66897C00973ED5 /* ChildView.storyboard */; };
 		B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */; };
+		B1235B3C1D668F0900973ED5 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B3B1D668F0900973ED5 /* WebView.storyboard */; };
+		B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B3D1D668F6E00973ED5 /* UIWebViewController.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		B1235B321D6686DC00973ED5 /* AlertAndActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertAndActionSheetViewController.swift; path = Alert/AlertAndActionSheetViewController.swift; sourceTree = "<group>"; };
 		B1235B361D66897C00973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChildView.storyboard; sourceTree = "<group>"; };
 		B1235B381D6689DE00973ED5 /* SwitchChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchChildrenViewController.swift; path = ChildView/SwitchChildrenViewController.swift; sourceTree = "<group>"; };
+		B1235B3B1D668F0900973ED5 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = WebView/WebView.storyboard; sourceTree = "<group>"; };
+		B1235B3D1D668F6E00973ED5 /* UIWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWebViewController.swift; path = WebView/UIWebViewController.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,15 @@
 			name = ChildView;
 			sourceTree = "<group>";
 		};
+		B1235B3A1D668ECD00973ED5 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B1235B3B1D668F0900973ED5 /* WebView.storyboard */,
+				B1235B3D1D668F6E00973ED5 /* UIWebViewController.swift */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 				B1235B241D65485900973ED5 /* PageView */,
 				B1235B2E1D66867B00973ED5 /* Alert */,
 				B1235B341D66896500973ED5 /* ChildView */,
+				B1235B3A1D668ECD00973ED5 /* WebView */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -328,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1235B3C1D668F0900973ED5 /* WebView.storyboard in Resources */,
 				B16BB9A01D13AA46007BA1CF /* LaunchScreen.storyboard in Resources */,
 				B16BB99D1D13AA46007BA1CF /* Assets.xcassets in Resources */,
 				B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */,
@@ -362,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
+				B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */,
 				B16BB9CF1D13AF97007BA1CF /* Article.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
