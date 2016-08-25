@@ -30,6 +30,8 @@
 		B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13517801D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift */; };
 		B13517851D6EB22100CC513D /* ImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13517831D6EB22100CC513D /* ImagePicker.storyboard */; };
 		B13517871D6EB28800CC513D /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13517861D6EB28800CC513D /* ImagePickerViewController.swift */; };
+		B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13517891D6EB75300CC513D /* AVCapture.storyboard */; };
+		B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135178C1D6EB76700CC513D /* VideoCaptureViewController.swift */; };
 		B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9951D13AA46007BA1CF /* AppDelegate.swift */; };
 		B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9971D13AA46007BA1CF /* MenuViewController.swift */; };
 		B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16BB9991D13AA46007BA1CF /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 		B13517801D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewScrollOrNotViewController.swift; path = TextView/TextViewScrollOrNotViewController.swift; sourceTree = "<group>"; };
 		B13517841D6EB22100CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ImagePicker.storyboard; sourceTree = "<group>"; };
 		B13517861D6EB28800CC513D /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerViewController.swift; path = ImagePicker/ImagePickerViewController.swift; sourceTree = "<group>"; };
+		B135178A1D6EB75300CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AVCapture.storyboard; sourceTree = "<group>"; };
+		B135178C1D6EB76700CC513D /* VideoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCaptureViewController.swift; path = AVCapture/VideoCaptureViewController.swift; sourceTree = "<group>"; };
 		B16BB9921D13AA46007BA1CF /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16BB9951D13AA46007BA1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16BB9971D13AA46007BA1CF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 			name = ImagePicker;
 			sourceTree = "<group>";
 		};
+		B13517881D6EB6A800CC513D /* AVCapture */ = {
+			isa = PBXGroup;
+			children = (
+				B13517891D6EB75300CC513D /* AVCapture.storyboard */,
+				B135178C1D6EB76700CC513D /* VideoCaptureViewController.swift */,
+			);
+			name = AVCapture;
+			sourceTree = "<group>";
+		};
 		B16BB9891D13AA46007BA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +265,7 @@
 				B135177C1D67DE8000CC513D /* TextView */,
 				B1235B3F1D66987200973ED5 /* Search */,
 				B13517821D6EB1F000CC513D /* ImagePicker */,
+				B13517881D6EB6A800CC513D /* AVCapture */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
 				B16BB9991D13AA46007BA1CF /* Main.storyboard */,
@@ -416,6 +430,7 @@
 				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
+				B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */,
 				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
 			);
@@ -456,6 +471,7 @@
 				B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */,
 				B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */,
 				B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */,
+				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
@@ -551,6 +567,14 @@
 				B13517841D6EB22100CC513D /* Base */,
 			);
 			name = ImagePicker.storyboard;
+			sourceTree = "<group>";
+		};
+		B13517891D6EB75300CC513D /* AVCapture.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B135178A1D6EB75300CC513D /* Base */,
+			);
+			name = AVCapture.storyboard;
 			sourceTree = "<group>";
 		};
 		B16BB9991D13AA46007BA1CF /* Main.storyboard */ = {
