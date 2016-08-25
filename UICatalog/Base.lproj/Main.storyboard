@@ -464,13 +464,21 @@
             </objects>
             <point key="canvasLocation" x="1535" y="819"/>
         </scene>
+        <!--ImagePickerView-->
+        <scene sceneID="pfN-fC-tkW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImagePicker" referencedIdentifier="ImagePickerView" id="hQG-JM-tbh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iB-RK-ov1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-821.5" y="385"/>
+        </scene>
         <!--SwitchChildrenView-->
         <scene sceneID="rVO-nb-ofj">
             <objects>
                 <viewControllerPlaceholder storyboardName="ChildView" referencedIdentifier="SwitchChildrenView" id="GpL-XL-FWx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Auy-tL-63c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="385"/>
+            <point key="canvasLocation" x="-1022" y="385"/>
         </scene>
         <!--AlertAndActionSheetView-->
         <scene sceneID="Hal-G5-GIH">
@@ -478,7 +486,7 @@
                 <viewControllerPlaceholder storyboardName="Alert" referencedIdentifier="AlertAndActionSheetView" id="iNP-j4-Nsi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPN-77-jhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1137" y="385"/>
+            <point key="canvasLocation" x="-1219" y="385"/>
         </scene>
         <!--ScrollPagingView-->
         <scene sceneID="mNi-dw-eKb">
@@ -486,7 +494,7 @@
                 <viewControllerPlaceholder storyboardName="PageView" referencedIdentifier="ScrollPagingView" id="tuB-dz-MXk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohn-gd-HJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1326" y="385"/>
+            <point key="canvasLocation" x="-1408" y="385"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="u0A-aO-mg6">
@@ -839,6 +847,30 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="GpL-XL-FWx" kind="show" id="aqt-KO-O9K"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Image Picker" id="l5F-Hc-Nlx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Alt-VJ-cjd" style="IBUITableViewCellStyleDefault" id="TGN-rv-frt">
+                                        <rect key="frame" x="0.0" y="395.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TGN-rv-frt" id="4h6-DW-Gdq">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Image Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Alt-VJ-cjd">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hQG-JM-tbh" kind="show" id="vIo-0s-suq"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
