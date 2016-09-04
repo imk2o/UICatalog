@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.setupAppearance()
+        
         return true
     }
 
@@ -40,7 +42,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+private extension AppDelegate {
+    func setupAppearance() {
+        if let tintColor: UIColor = UserDefaultsManager.shared.value(for: "UINavigationBar.tintColor") {
+            UINavigationBar.appearance().tintColor = tintColor
+        }
+        if let barTintColor: UIColor = UserDefaultsManager.shared.value(for: "UINavigationBar.barTintColor") {
+            UINavigationBar.appearance().barTintColor = barTintColor
+        }
+        if let titleTextColor: UIColor = UserDefaultsManager.shared.value(for: "UINavigationBar.titleTextColor") {
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: titleTextColor]
+        }
+    }
+}
