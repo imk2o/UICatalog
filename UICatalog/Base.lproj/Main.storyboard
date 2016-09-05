@@ -816,6 +816,26 @@
                                             <segue destination="xOk-2K-sVW" kind="show" id="STN-vs-Uzt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fF6-c1-Q4n" style="IBUITableViewCellStyleDefault" id="n1B-sJ-X28">
+                                        <rect key="frame" x="0.0" y="295.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n1B-sJ-X28" id="RjC-h0-n7l">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Navigation bar appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fF6-c1-Q4n">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9CP-Jw-FQ0" kind="show" id="RD3-db-zVf"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -853,6 +873,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dv0-Od-U1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2072" y="322"/>
+        </scene>
+        <!--NavigationBarAppearanceView-->
+        <scene sceneID="fzp-LO-hm0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Appearance" referencedIdentifier="NavigationBarAppearanceView" id="9CP-Jw-FQ0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZ4-rK-ZyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287.5" y="322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pps-Ov-QUV">

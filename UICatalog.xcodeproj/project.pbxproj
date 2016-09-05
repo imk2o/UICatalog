@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11703721D7D370B0016792B /* NavigationBarAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11703711D7D370B0016792B /* NavigationBarAppearanceViewController.swift */; };
+		B11703761D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11703751D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift */; };
 		B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1235B1D1D6541DE00973ED5 /* CollectionView.storyboard */; };
 		B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B201D65423600973ED5 /* GridCollectionViewController.swift */; };
 		B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B11703711D7D370B0016792B /* NavigationBarAppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationBarAppearanceViewController.swift; path = Appearance/NavigationBarAppearanceViewController.swift; sourceTree = "<group>"; };
+		B11703751D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+ActionSheetItemPicker.swift"; path = "Misc/UIViewController+ActionSheetItemPicker.swift"; sourceTree = "<group>"; };
 		B1235B1E1D6541DE00973ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CollectionView.storyboard; sourceTree = "<group>"; };
 		B1235B201D65423600973ED5 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridCollectionViewController.swift; path = CollectionView/GridCollectionViewController.swift; sourceTree = "<group>"; };
 		B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridCollectionViewCell.swift; path = CollectionView/GridCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			children = (
 				B13517AB1D7BE5B300CC513D /* Appearance.storyboard */,
 				B13517AE1D7BE62800CC513D /* UIAppearanceViewController.swift */,
+				B11703711D7D370B0016792B /* NavigationBarAppearanceViewController.swift */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */,
+				B11703751D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -506,8 +512,10 @@
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
+				B11703721D7D370B0016792B /* NavigationBarAppearanceViewController.swift in Sources */,
 				B135178F1D6EBC1100CC513D /* CodeReaderViewController.swift in Sources */,
 				B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */,
+				B11703761D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
 				B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */,
 			);
