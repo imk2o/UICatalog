@@ -735,7 +735,7 @@
                             <outlet property="delegate" destination="t4h-bT-Rpd" id="h3I-1P-YJK"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Layout" id="Rwt-B5-PWU"/>
+                    <tabBarItem key="tabBarItem" title="Layout" image="Layout" id="Rwt-B5-PWU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06N-of-KQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1021,7 +1021,7 @@
         <scene sceneID="u1T-qC-X9H">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="des-is-31F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="View Controller" id="xXu-VI-fRE"/>
+                    <tabBarItem key="tabBarItem" title="View Controller" image="ViewController" id="xXu-VI-fRE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6hr-7Y-CZT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1040,7 +1040,7 @@
         <scene sceneID="Nbp-1i-vun">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6v7-hA-3qX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Control" id="r9F-wb-6wi"/>
+                    <tabBarItem key="tabBarItem" title="Control" image="Control" id="r9F-wb-6wi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rWd-cS-K0h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1059,7 +1059,7 @@
         <scene sceneID="Zvs-qS-Dvp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sjf-4h-ofl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="View" id="28w-WD-KlT"/>
+                    <tabBarItem key="tabBarItem" title="View" image="View" id="28w-WD-KlT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hwb-f8-kWB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1094,7 +1094,7 @@
         <scene sceneID="5MV-kq-b5x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W1f-Tb-uFL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Misc" id="VlO-Zw-TrH"/>
+                    <tabBarItem key="tabBarItem" title="Misc" image="Misc" id="VlO-Zw-TrH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bce-8G-M6c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1110,4 +1110,11 @@
             <point key="canvasLocation" x="2028" y="-910"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Control" width="30" height="30"/>
+        <image name="Layout" width="30" height="30"/>
+        <image name="Misc" width="30" height="30"/>
+        <image name="View" width="30" height="30"/>
+        <image name="ViewController" width="30" height="30"/>
+    </resources>
 </document>
