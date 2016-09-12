@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SP6-tb-hwi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SP6-tb-hwi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -522,7 +522,7 @@
             <objects>
                 <tableViewController id="7ss-su-dIx" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pln-a0-KdR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -646,6 +646,30 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Visual Effect View" id="pLN-AX-bTQ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yDQ-91-ccx" style="IBUITableViewCellStyleDefault" id="mrU-MQ-de3">
+                                        <rect key="frame" x="0.0" y="583.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrU-MQ-de3" id="PBU-9d-lFB">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Visual Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yDQ-91-ccx">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1XW-Ew-D37" kind="show" id="TjA-N8-qD9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="7ss-su-dIx" id="rOK-H5-aSd"/>
@@ -653,6 +677,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="View" id="unq-h7-b63"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tc-u1-1sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,7 +690,7 @@
                 <viewControllerPlaceholder storyboardName="WebView" referencedIdentifier="UIWebView" id="Rcr-rR-0h1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eda-pW-8Gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541.5" y="385"/>
+            <point key="canvasLocation" x="531.5" y="452"/>
         </scene>
         <!--SearchView-->
         <scene sceneID="xZg-6Y-sMc">
@@ -672,7 +698,15 @@
                 <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchView" id="Htf-Dk-PqR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0w8-hR-PeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697.5" y="385"/>
+            <point key="canvasLocation" x="687.5" y="452"/>
+        </scene>
+        <!--VisualEffectView-->
+        <scene sceneID="bud-R7-taP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VisualEffectView" referencedIdentifier="VisualEffectView" id="1XW-Ew-D37" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-KM-VuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="452"/>
         </scene>
         <!--TextViewScrollOrNotView-->
         <scene sceneID="8Kp-Kk-CUH">
@@ -680,7 +714,7 @@
                 <viewControllerPlaceholder storyboardName="TextView" referencedIdentifier="TextViewScrollOrNotView" id="e3p-nR-uTc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYn-Zb-1mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.5" y="385"/>
+            <point key="canvasLocation" x="858.5" y="452"/>
         </scene>
         <!--View-->
         <scene sceneID="DoM-x2-vft">
@@ -1080,7 +1114,7 @@
                 <viewControllerPlaceholder storyboardName="TableView" referencedIdentifier="SelfSizingCellTableView" id="rbe-Ph-6iJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zc-hX-8Gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="385"/>
+            <point key="canvasLocation" x="170" y="452"/>
         </scene>
         <!--GridCollectionView-->
         <scene sceneID="18K-RX-iXR">
@@ -1088,7 +1122,7 @@
                 <viewControllerPlaceholder storyboardName="CollectionView" referencedIdentifier="GridCollectionView" id="bhw-iE-6qP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8af-rr-S5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="385"/>
+            <point key="canvasLocation" x="370" y="452"/>
         </scene>
         <!--Misc-->
         <scene sceneID="5MV-kq-b5x">
