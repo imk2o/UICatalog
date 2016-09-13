@@ -51,7 +51,7 @@
 		B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9D01D13AFA4007BA1CF /* ArticleProvider.swift */; };
 		B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */; };
 		B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AA131D1D86777D00D7D0A5 /* VisualEffectView.storyboard */; };
-		B1AA13211D86788F00D7D0A5 /* VisualEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectViewController.swift */; };
+		B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +123,7 @@
 		B16BB9D01D13AFA4007BA1CF /* ArticleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleProvider.swift; path = Article/ArticleProvider.swift; sourceTree = "<group>"; };
 		B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = TableView/ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		B1AA131E1D86777D00D7D0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VisualEffectView.storyboard; sourceTree = "<group>"; };
-		B1AA13201D86788F00D7D0A5 /* VisualEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectViewController.swift; path = VisualEffectView/VisualEffectViewController.swift; sourceTree = "<group>"; };
+		B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectOverlayViewController.swift; path = VisualEffectView/VisualEffectOverlayViewController.swift; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,7 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				B1AA131D1D86777D00D7D0A5 /* VisualEffectView.storyboard */,
-				B1AA13201D86788F00D7D0A5 /* VisualEffectViewController.swift */,
+				B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */,
 			);
 			name = VisualEffectView;
 			sourceTree = "<group>";
@@ -526,7 +526,7 @@
 				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
-				B1AA13211D86788F00D7D0A5 /* VisualEffectViewController.swift in Sources */,
+				B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
 				B11703721D7D370B0016792B /* NavigationBarAppearanceViewController.swift in Sources */,
 				B135178F1D6EBC1100CC513D /* CodeReaderViewController.swift in Sources */,

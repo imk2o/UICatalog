@@ -690,7 +690,7 @@
                 <viewControllerPlaceholder storyboardName="WebView" referencedIdentifier="UIWebView" id="Rcr-rR-0h1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eda-pW-8Gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.5" y="452"/>
+            <point key="canvasLocation" x="301.5" y="463"/>
         </scene>
         <!--SearchView-->
         <scene sceneID="xZg-6Y-sMc">
@@ -698,7 +698,7 @@
                 <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchView" id="Htf-Dk-PqR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0w8-hR-PeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687.5" y="452"/>
+            <point key="canvasLocation" x="457.5" y="463"/>
         </scene>
         <!--VisualEffectView-->
         <scene sceneID="bud-R7-taP">
@@ -706,7 +706,7 @@
                 <viewControllerPlaceholder storyboardName="VisualEffectView" referencedIdentifier="VisualEffectView" id="1XW-Ew-D37" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-KM-VuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.5" y="452"/>
+            <point key="canvasLocation" x="827.5" y="463"/>
         </scene>
         <!--TextViewScrollOrNotView-->
         <scene sceneID="8Kp-Kk-CUH">
@@ -714,7 +714,7 @@
                 <viewControllerPlaceholder storyboardName="TextView" referencedIdentifier="TextViewScrollOrNotView" id="e3p-nR-uTc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYn-Zb-1mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858.5" y="452"/>
+            <point key="canvasLocation" x="628.5" y="463"/>
         </scene>
         <!--View-->
         <scene sceneID="DoM-x2-vft">
@@ -1114,7 +1114,7 @@
                 <viewControllerPlaceholder storyboardName="TableView" referencedIdentifier="SelfSizingCellTableView" id="rbe-Ph-6iJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zc-hX-8Gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="452"/>
+            <point key="canvasLocation" x="-60" y="463"/>
         </scene>
         <!--GridCollectionView-->
         <scene sceneID="18K-RX-iXR">
@@ -1122,7 +1122,7 @@
                 <viewControllerPlaceholder storyboardName="CollectionView" referencedIdentifier="GridCollectionView" id="bhw-iE-6qP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8af-rr-S5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="452"/>
+            <point key="canvasLocation" x="140" y="463"/>
         </scene>
         <!--Misc-->
         <scene sceneID="5MV-kq-b5x">
