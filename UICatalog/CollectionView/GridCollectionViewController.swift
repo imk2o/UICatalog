@@ -17,6 +17,10 @@ class GridCollectionViewController: UIViewController {
         super.viewDidLoad()
 
         self.articles = ArticleProvider.shared.allArticles()
+        
+        // NOTE:
+        // Interface BuilderでFloatingHeaderFlowLayoutにカスタマイズしているため、
+        // ヘッダビューが上部に固定される
     }
 
     override func didReceiveMemoryWarning() {

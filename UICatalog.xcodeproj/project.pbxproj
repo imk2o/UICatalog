@@ -52,6 +52,7 @@
 		B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */; };
 		B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AA131D1D86777D00D7D0A5 /* VisualEffectView.storyboard */; };
 		B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */; };
+		B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = TableView/ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		B1AA131E1D86777D00D7D0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VisualEffectView.storyboard; sourceTree = "<group>"; };
 		B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectOverlayViewController.swift; path = VisualEffectView/VisualEffectOverlayViewController.swift; sourceTree = "<group>"; };
+		B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingHeaderFlowLayout.swift; path = CollectionView/FloatingHeaderFlowLayout.swift; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				B1235B1D1D6541DE00973ED5 /* CollectionView.storyboard */,
 				B1235B201D65423600973ED5 /* GridCollectionViewController.swift */,
 				B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */,
+				B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */,
 				B16BB9CF1D13AF97007BA1CF /* Article.swift in Sources */,
 				B13517871D6EB28800CC513D /* ImagePickerViewController.swift in Sources */,
+				B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
 				B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
