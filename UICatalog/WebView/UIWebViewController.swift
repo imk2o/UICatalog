@@ -73,18 +73,16 @@ extension UIWebViewController: UIWebViewDelegate {
         }
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         
-        if let error = error {
-            if error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
-                // 通信がキャンセルされた
-            } else {
-                print(error)
-            }
+        if error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
+            // 通信がキャンセルされた
+        } else {
+            print(error)
         }
     }
-    
+
 //    // 非公開デリゲートメソッド(iOS7〜9動作確認済)
 //    // Webページ内全てのHTTPリクエストの前に呼び出される
 //    // カスタムのヘッダを付与する場合などに便利
