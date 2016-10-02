@@ -53,6 +53,7 @@
 		B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AA131D1D86777D00D7D0A5 /* VisualEffectView.storyboard */; };
 		B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */; };
 		B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */; };
+		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		B1AA131E1D86777D00D7D0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VisualEffectView.storyboard; sourceTree = "<group>"; };
 		B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectOverlayViewController.swift; path = VisualEffectView/VisualEffectOverlayViewController.swift; sourceTree = "<group>"; };
 		B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingHeaderFlowLayout.swift; path = CollectionView/FloatingHeaderFlowLayout.swift; sourceTree = "<group>"; };
+		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 			children = (
 				B135177D1D67DE9700CC513D /* TextView.storyboard */,
 				B13517801D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift */,
+				B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */,
 			);
 			name = TextView;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
+				B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */,
 				B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
 				B11703721D7D370B0016792B /* NavigationBarAppearanceViewController.swift in Sources */,
@@ -773,7 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UICatalog/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -786,7 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UICatalog/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";

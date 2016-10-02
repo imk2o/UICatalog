@@ -162,12 +162,32 @@
                                             <segue destination="e3p-nR-uTc" kind="show" id="hJc-x3-OkP"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="DMA-2s-BEH" style="IBUITableViewCellStyleDefault" id="xcw-0g-Gaw">
+                                        <rect key="frame" x="0.0" y="463.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xcw-0g-Gaw" id="BQo-3T-mGw">
+                                            <frame key="frameInset" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Read More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DMA-2s-BEH">
+                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SAi-xX-cAX" kind="show" id="icR-OW-95W"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Search" id="uiE-h8-3Lw">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iqF-6C-Ov3" style="IBUITableViewCellStyleDefault" id="mtc-gi-WdM">
-                                        <rect key="frame" x="0.0" y="519.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="563.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mtc-gi-WdM" id="gph-TS-Oia">
                                             <frame key="frameInset" width="342" height="43"/>
@@ -191,7 +211,7 @@
                             <tableViewSection headerTitle="Visual Effect View" id="pLN-AX-bTQ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yDQ-91-ccx" style="IBUITableViewCellStyleDefault" id="mrU-MQ-de3">
-                                        <rect key="frame" x="0.0" y="619.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="663.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrU-MQ-de3" id="PBU-9d-lFB">
                                             <frame key="frameInset" width="342" height="43"/>
@@ -246,7 +266,15 @@
                 <viewControllerPlaceholder storyboardName="VisualEffectView" referencedIdentifier="VisualEffectView" id="1XW-Ew-D37" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-KM-VuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.5" y="463"/>
+            <point key="canvasLocation" x="1148" y="461"/>
+        </scene>
+        <!--ReadMoreTextView-->
+        <scene sceneID="lqM-ET-Gh8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TextView" referencedIdentifier="ReadMoreTextView" id="SAi-xX-cAX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgb-dh-UI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="461"/>
         </scene>
         <!--TextViewScrollOrNotView-->
         <scene sceneID="8Kp-Kk-CUH">
