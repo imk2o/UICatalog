@@ -18,8 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-qi-TG6">
-                                <frame key="frameInset" width="600" height="600"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-qi-TG6">
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zCb-hs-tpA" customClass="FloatingHeaderFlowLayout" customModule="UICatalog" customModuleProvider="target">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -49,7 +48,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="mOA-kK-Uzw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection Viewを選択し、Attributes Inspectorの&quot;Section Header&quot;をオンにしてヘッダを追加" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDp-kZ-UWN">
@@ -89,6 +88,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naw-3d-CKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="331"/>
+        </scene>
+        <!--Horizontal Collection View-->
+        <scene sceneID="J4f-A9-b0U">
+            <objects>
+                <viewController storyboardIdentifier="HorizontalCollectionView" automaticallyAdjustsScrollViewInsets="NO" id="0vJ-Dw-2xh" customClass="HorizontalCollectionViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZPv-Ln-qXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tvo-O4-cvF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhs-Af-W1e">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rsp-4g-kiv">
+                                <color key="backgroundColor" red="0.5256012082" green="1" blue="0.50194072720000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ktC-F9-81s"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XWm-eF-WGx">
+                                    <size key="itemSize" width="100" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7Cc-1r-ClH" customClass="HorizontalCollectionViewCell" customModule="UICatalog" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="0.0" width="100" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-Ax-aPj">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hlg-Ax-aPj" firstAttribute="leading" secondItem="7Cc-1r-ClH" secondAttribute="leading" constant="8" id="GOE-fU-TGS"/>
+                                            <constraint firstItem="hlg-Ax-aPj" firstAttribute="centerY" secondItem="7Cc-1r-ClH" secondAttribute="centerY" id="V1j-D7-tZq"/>
+                                            <constraint firstAttribute="trailing" secondItem="hlg-Ax-aPj" secondAttribute="trailing" constant="8" id="VIi-ke-0MV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="hlg-Ax-aPj" id="qzp-D4-nqd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0vJ-Dw-2xh" id="3Y1-KW-rsb"/>
+                                    <outlet property="delegate" destination="0vJ-Dw-2xh" id="esD-A9-OqG"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IW1-eI-jeI">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBd-5M-NNV">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="of5-hz-6eS"/>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTT-Sg-ZNf">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finite Loop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7x-6K-tRY">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-aY-gHV">
+                                        <connections>
+                                            <action selector="finiteLoopDidSwitch" destination="0vJ-Dw-2xh" eventType="valueChanged" id="aTn-e7-ctj"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oTT-Sg-ZNf" secondAttribute="trailing" constant="16" id="34f-Kr-dD1"/>
+                            <constraint firstAttribute="trailing" secondItem="IW1-eI-jeI" secondAttribute="trailing" constant="16" id="EX0-qh-KyB"/>
+                            <constraint firstItem="IW1-eI-jeI" firstAttribute="leading" secondItem="bhs-Af-W1e" secondAttribute="leading" constant="16" id="GWu-wL-jkG"/>
+                            <constraint firstItem="IW1-eI-jeI" firstAttribute="top" secondItem="Rsp-4g-kiv" secondAttribute="bottom" constant="8" id="HRD-8R-61v"/>
+                            <constraint firstItem="Rsp-4g-kiv" firstAttribute="centerY" secondItem="bhs-Af-W1e" secondAttribute="centerY" id="KRL-up-6bj"/>
+                            <constraint firstItem="oTT-Sg-ZNf" firstAttribute="leading" secondItem="bhs-Af-W1e" secondAttribute="leading" constant="16" id="PB8-Tg-HG4"/>
+                            <constraint firstAttribute="trailing" secondItem="Rsp-4g-kiv" secondAttribute="trailing" id="kWY-mK-Kku"/>
+                            <constraint firstItem="oTT-Sg-ZNf" firstAttribute="top" secondItem="IW1-eI-jeI" secondAttribute="bottom" constant="8" id="lh9-Hq-sFd"/>
+                            <constraint firstItem="Rsp-4g-kiv" firstAttribute="leading" secondItem="bhs-Af-W1e" secondAttribute="leading" id="q3f-o6-KbE"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Horizontal Collection View" id="MYM-VA-lVa"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="autoSelectionSwitch" destination="of5-hz-6eS" id="TAw-jU-G4F"/>
+                        <outlet property="collectionView" destination="Rsp-4g-kiv" id="vO4-ii-3cW"/>
+                        <outlet property="finiteLoopSwitch" destination="KkX-aY-gHV" id="7Ot-rh-jmP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hP-U8-wIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.5999999999999" y="330.58470764617692"/>
         </scene>
     </scenes>
 </document>

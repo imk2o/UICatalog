@@ -54,6 +54,8 @@
 		B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */; };
 		B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */; };
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
+		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
+		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectOverlayViewController.swift; path = VisualEffectView/VisualEffectOverlayViewController.swift; sourceTree = "<group>"; };
 		B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingHeaderFlowLayout.swift; path = CollectionView/FloatingHeaderFlowLayout.swift; sourceTree = "<group>"; };
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
+		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
+		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +167,8 @@
 				B1235B201D65423600973ED5 /* GridCollectionViewController.swift */,
 				B1235B221D65460D00973ED5 /* GridCollectionViewCell.swift */,
 				B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */,
+				B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */,
+				B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				TargetAttributes = {
 					B16BB9911D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 427QQ329ZX;
 						LastSwiftMigration = 0800;
 					};
 					B16BB9A51D13AA46007BA1CF = {
@@ -536,6 +543,8 @@
 				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
+				B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */,
+				B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */,
 				B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */,
 				B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
@@ -776,6 +785,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 427QQ329ZX;
 				INFOPLIST_FILE = UICatalog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -789,6 +799,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 427QQ329ZX;
 				INFOPLIST_FILE = UICatalog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
