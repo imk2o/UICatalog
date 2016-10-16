@@ -17,7 +17,7 @@ class ReadMoreTextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.textView.textContainer.lineBreakMode = .ByTruncatingTail
+        self.textView.textContainer.lineBreakMode = .byTruncatingTail
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,9 +26,9 @@ class ReadMoreTextViewController: UIViewController {
     }
     
 
-    @IBAction func readMore(sender: UIButton) {
-        self.textViewHeightConstraint.active = false
-        self.readMoreButton.hidden = true
+    @IBAction func readMore(_ sender: UIButton) {
+        self.textViewHeightConstraint.isActive = false
+        self.readMoreButton.isHidden = true
     }
     /*
     // MARK: - Navigation

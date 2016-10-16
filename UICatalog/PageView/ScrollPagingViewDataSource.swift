@@ -9,8 +9,8 @@
 import UIKit
 
 class ScrollPagingViewDataSource: NSObject, UIPageViewControllerDataSource {
-    private let articles: [Article]
-    private var numberOfPages: Int {
+    fileprivate let articles: [Article]
+    fileprivate var numberOfPages: Int {
         return self.articles.count
     }
     
@@ -27,8 +27,8 @@ class ScrollPagingViewDataSource: NSObject, UIPageViewControllerDataSource {
     }
     
     func pageViewController(
-        pageViewController: UIPageViewController,
-        viewControllerBeforeViewController viewController: UIViewController
+        _ pageViewController: UIPageViewController,
+        viewControllerBefore viewController: UIViewController
         ) -> UIViewController? {
         let index = self.indexOf(viewController)
         if index == 0 {
@@ -40,7 +40,7 @@ class ScrollPagingViewDataSource: NSObject, UIPageViewControllerDataSource {
         return self.viewController(at: index - 1)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let index = self.indexOf(viewController)
         if index == self.numberOfPages - 1 {
             return nil
@@ -51,9 +51,9 @@ class ScrollPagingViewDataSource: NSObject, UIPageViewControllerDataSource {
         return self.viewController(at: index + 1)
     }
     
-    private func viewController(at index: Int) -> UIViewController {
+    fileprivate func viewController(at index: Int) -> UIViewController {
         let storyboard = UIStoryboard(name: "PageView", bundle: nil)
-        guard let viewController = storyboard.instantiateViewControllerWithIdentifier("PageContentView") as? PageContentViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "PageContentView") as? PageContentViewController else {
             fatalError()
         }
         
@@ -63,7 +63,7 @@ class ScrollPagingViewDataSource: NSObject, UIPageViewControllerDataSource {
         return viewController
     }
     
-    private func indexOf(viewController: UIViewController) -> Int {
+    fileprivate func indexOf(_ viewController: UIViewController) -> Int {
         guard let viewController = viewController as? PageContentViewController else {
             fatalError()
         }

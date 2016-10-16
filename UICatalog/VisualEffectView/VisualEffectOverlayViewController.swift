@@ -19,11 +19,11 @@ class VisualEffectOverlayViewController: UIViewController {
         self.setBlurEffectStyle(nil, animated: false)
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.setBlurEffectStyle(.Light, animated: true)
+        DispatchQueue.main.async {
+            self.setBlurEffectStyle(.light, animated: true)
         }
     }
     
@@ -33,17 +33,17 @@ class VisualEffectOverlayViewController: UIViewController {
     }
     
 
-    @IBAction func dismiss(sender: UIButton) {
-        self.setBlurEffectStyle(.None, animated: true) { 
-            self.dismissViewControllerAnimated(false, completion: nil)
+    @IBAction func dismiss(_ sender: UIButton) {
+        self.setBlurEffectStyle(.none, animated: true) { 
+            self.dismiss(animated: false, completion: nil)
         }
     }
     
-    @IBAction func editStyle(sender: UIButton) {
+    @IBAction func editStyle(_ sender: UIButton) {
         let items: [(String, UIBlurEffectStyle?)] = [
-            ("ExtraLight", .ExtraLight),
-            ("Light", .Light),
-            ("Dark", .Dark),
+            ("ExtraLight", .extraLight),
+            ("Light", .light),
+            ("Dark", .dark),
             ("None", nil)
         ]
         self.pickItem(
@@ -51,16 +51,16 @@ class VisualEffectOverlayViewController: UIViewController {
             title: nil,
             message: "UIView.animateWithDuration()でBlur Styleを変えることでアニメーションします。nilにすると、ぼかし半径を変えながらアニメーションします。"
         ) { (title, value) in
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.setBlurEffectStyle(value, animated: true)
             }
         }
     }
 
-    private func setBlurEffectStyle(style: UIBlurEffectStyle?, animated: Bool, completion handler: (() -> Void)? = nil) {
+    fileprivate func setBlurEffectStyle(_ style: UIBlurEffectStyle?, animated: Bool, completion handler: (() -> Void)? = nil) {
         if animated {
-            UIView.animateWithDuration(
-                0.5,
+            UIView.animate(
+                withDuration: 0.5,
                 animations: {
                     self.setBlurEffectStyle(style, animated: false)
                 },

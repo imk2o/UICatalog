@@ -21,8 +21,8 @@ class AlertAndActionSheetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func alertButtonDidTap(sender: UIButton) {
-        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .Alert)
+    @IBAction func alertButtonDidTap(_ sender: UIButton) {
+        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
         
         // FIXME: TextField を追加したい場合は以下を有効に
         //alert.addTextFieldWithConfigurationHandler { (textField: UITextField) in
@@ -31,25 +31,25 @@ class AlertAndActionSheetViewController: UIViewController {
         
         // FIXME: Cancel ボタンを追加したい場合は以下を有効に
         //alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction) in
             // FIXME: OK 選択時の挙動を実装...
             })
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 
-    @IBAction func actionSheetButtonDidTap(sender: UIButton) {
-        let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .ActionSheet)
+    @IBAction func actionSheetButtonDidTap(_ sender: UIButton) {
+        let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
         
         for i in 1...3 {
-            actionSheet.addAction(UIAlertAction(title: "Item\(i)", style: .Default) { (action) in
+            actionSheet.addAction(UIAlertAction(title: "Item\(i)", style: .default) { (action) in
                 // FIXME: アイテム選択時の挙動を実装...
                 })
         }
         
-        actionSheet.addAction(UIAlertAction(title: "Delete", style: .Destructive, handler: nil))
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }

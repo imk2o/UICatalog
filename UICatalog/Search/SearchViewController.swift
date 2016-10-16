@@ -9,8 +9,8 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    private var searchController: UISearchController!
-    private var dataSource: SearchViewDataSource!
+    fileprivate var searchController: UISearchController!
+    fileprivate var dataSource: SearchViewDataSource!
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class SearchViewController: UIViewController {
     }
 }
 
-private extension SearchViewController {
+fileprivate extension SearchViewController {
     var selectedCategory: AppleProduct.Category? {
         guard let scopeButtonTitles = self.searchController.searchBar.scopeButtonTitles else {
             return nil
@@ -63,13 +63,13 @@ private extension SearchViewController {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         self.search()
     }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         self.search()
     }
 }

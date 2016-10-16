@@ -9,7 +9,7 @@
 import UIKit
 
 class SelfSizingCellTableViewController: UIViewController {
-    private var articles: [Article] = []
+    fileprivate var articles: [Article] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,26 +40,26 @@ class SelfSizingCellTableViewController: UIViewController {
 }
 
 extension SelfSizingCellTableViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.articles.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? ArticleTableViewCell else {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ArticleTableViewCell else {
             fatalError()
         }
-        let article = self.articles[indexPath.row]
+        let article = self.articles[(indexPath as NSIndexPath).row]
         
         cell.configure(with: article)
         
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return [
             "Self sizing cellを有効にする場合はまず以下を行います。",
             "・`UITableView#estimatedRowHeight`におおよそのセルの高さを設定",
@@ -69,6 +69,6 @@ extension SelfSizingCellTableViewController: UITableViewDataSource {
             "・伸張する必要のないUILabelは`Content Hugging Priority`を251より大きくする",
             "・すべてのテキストを表示するUILabelは`Lines`を0にする",
             "・伸張するラベルと画像を並べる場合、label.height >= imageView.heightとなるConstraintを設定する"
-            ].joinWithSeparator("\n")
+            ].joined(separator: "\n")
     }
 }

@@ -15,8 +15,8 @@ class UIWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let initialURL = NSURL(string: "https://www.apple.com/jp")!
-        let request = NSURLRequest(URL: initialURL)
+        let initialURL = URL(string: "https://www.apple.com/jp")!
+        let request = URLRequest(url: initialURL)
 //        // NOTE: ローカルキャッシュを使用しないリクエスト
 //        let request = NSURLRequest(
 //            URL: initialURL,
@@ -46,7 +46,7 @@ class UIWebViewController: UIViewController {
 }
 
 extension UIWebViewController: UIWebViewDelegate {
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
 //        // レスポンスをキャッシュしないリクエストに補正するハック
 //        // 本来ならサーバからCache-Control: no-cacheでレスポンスすべきだが...
@@ -60,23 +60,24 @@ extension UIWebViewController: UIWebViewDelegate {
         return true
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
         // <title>タグの内容を取得し、ナビバータイトルに表示
-        if let title = webView.stringByEvaluatingJavaScriptFromString("document.title") {
+        if let title = webView.stringByEvaluatingJavaScript(from: "document.title") {
             self.navigationItem.title = title
         }
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
-        if error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
+        let nsError = error as NSError
+        if nsError.domain == NSURLErrorDomain && nsError.code == NSURLErrorCancelled {
             // 通信がキャンセルされた
         } else {
             print(error)

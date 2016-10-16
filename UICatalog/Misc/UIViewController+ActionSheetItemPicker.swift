@@ -13,18 +13,18 @@ extension UIViewController {
         from items: [(String, Value)],
              title: String? = nil,
              message: String? = nil,
-             completion handler: (String, Value) -> Void)
+             completion handler: @escaping (String, Value) -> Void)
     {
-        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         
         for item in items {
-            actionSheet.addAction(UIAlertAction(title: item.0, style: .Default) { (action) in
+            actionSheet.addAction(UIAlertAction(title: item.0, style: .default) { (action) in
                 handler(item.0, item.1)
             })
         }
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }

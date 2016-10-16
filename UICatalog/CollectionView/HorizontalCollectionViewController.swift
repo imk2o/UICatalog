@@ -10,20 +10,20 @@ import UIKit
 
 class HorizontalCollectionViewController: UIViewController {
     /// なんちゃって無限ループの数(あまり大きくしすぎるとクラッシュするかも)
-    private let numberOfSectionsForFiniteLoop = 100
+    fileprivate let numberOfSectionsForFiniteLoop = 100
     
-    private var products: [AppleProduct]!
+    fileprivate var products: [AppleProduct]!
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var autoSelectionSwitch: UISwitch!
     @IBOutlet weak var finiteLoopSwitch: UISwitch!
     
-    private var autoSelectionEnabled: Bool {
-        return self.autoSelectionSwitch.on
+    fileprivate var autoSelectionEnabled: Bool {
+        return self.autoSelectionSwitch.isOn
     }
     
-    private var finiteLoopEnabled: Bool {
-        return self.finiteLoopSwitch.on
+    fileprivate var finiteLoopEnabled: Bool {
+        return self.finiteLoopSwitch.isOn
     }
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class HorizontalCollectionViewController: UIViewController {
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Finite Loop用に初期スクロール位置をアイテム群の中央付近に調整
@@ -59,31 +59,31 @@ class HorizontalCollectionViewController: UIViewController {
     }
 
     /// Finite Loop切替時の初期スクロール位置を設定
-    private func setScrollPositionByFiniteLoopEnabled() {
-        let indexPath: NSIndexPath
+    fileprivate func setScrollPositionByFiniteLoopEnabled() {
+        let indexPath: IndexPath
         if self.finiteLoopEnabled {
-            indexPath = NSIndexPath(forItem: 0, inSection: self.numberOfSectionsForFiniteLoop / 2)
+            indexPath = IndexPath(item: 0, section: self.numberOfSectionsForFiniteLoop / 2)
         } else {
-            indexPath = NSIndexPath(forItem: 0, inSection: 0)
+            indexPath = IndexPath(item: 0, section: 0)
         }
-        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: false)
+        self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
     }
 }
 
 extension HorizontalCollectionViewController: UICollectionViewDataSource {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.finiteLoopEnabled ? self.numberOfSectionsForFiniteLoop : 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.products.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as? HorizontalCollectionViewCell else {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? HorizontalCollectionViewCell else {
             fatalError()
         }
-        let product = self.products[indexPath.item]
+        let product = self.products[(indexPath as NSIndexPath).item]
         
         cell.label.text = product.name
         
@@ -92,33 +92,33 @@ extension HorizontalCollectionViewController: UICollectionViewDataSource {
 }
 
 extension HorizontalCollectionViewController: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // 選択アイテムが中央に表示されるようスクロール
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }
 
 // NOTE: ドラッグ終了または慣性スクロール終了後に自動選択を行う
 extension HorizontalCollectionViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate && self.autoSelectionEnabled {
             self.selectItemAutomatically()
         }
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if self.autoSelectionEnabled {
             self.selectItemAutomatically()
         }
     }
     
-    private func selectItemAutomatically() {
+    fileprivate func selectItemAutomatically() {
         let rect = self.collectionView.bounds
         let center = CGPoint(x: rect.midX, y: rect.midY)
         // TODO: centerがちょうどspacingやinsetsに当たるとnilを返すため、矩形判定などに変えるべき
-        if let indexPath = self.collectionView.indexPathForItemAtPoint(center) {
-            self.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .CenteredHorizontally)
+        if let indexPath = self.collectionView.indexPathForItem(at: center) {
+            self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         }
         
     }

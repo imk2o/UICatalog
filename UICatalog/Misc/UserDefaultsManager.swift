@@ -11,32 +11,32 @@ import UIKit
 class UserDefaultsManager {
     static let shared = UserDefaultsManager()
 
-    private var userDefaults: NSUserDefaults {
-        return NSUserDefaults.standardUserDefaults()
+    fileprivate var userDefaults: UserDefaults {
+        return UserDefaults.standard
     }
     
-    private init() {
+    fileprivate init() {
     }
 
-    func set<V where V: NSCoding>(value value: V, for key: String) {
-        let data = NSKeyedArchiver.archivedDataWithRootObject(value)
-        self.userDefaults.setObject(data, forKey: key)
+    func set<V>(value: V, for key: String) where V: NSCoding {
+        let data = NSKeyedArchiver.archivedData(withRootObject: value)
+        self.userDefaults.set(data, forKey: key)
         self.userDefaults.synchronize()
     }
     
-    func value<V where V: NSCoding>(for key: String) -> V? {
-        let data = self.userDefaults.dataForKey(key)
+    func value<V>(for key: String) -> V? where V: NSCoding {
+        let data = self.userDefaults.data(forKey: key)
         return data.flatMap {
-            NSKeyedUnarchiver.unarchiveObjectWithData($0) as? V
+            NSKeyedUnarchiver.unarchiveObject(with: $0) as? V
         }
     }
     
     func contains(for key: String) -> Bool {
-        return self.userDefaults.objectForKey(key) != nil
+        return self.userDefaults.object(forKey: key) != nil
     }
     
     func remove(for key: String) {
-        self.userDefaults.removeObjectForKey(key)
+        self.userDefaults.removeObject(forKey: key)
     }
     
     func clear() {

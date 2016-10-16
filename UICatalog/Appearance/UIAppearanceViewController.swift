@@ -31,8 +31,8 @@ class UIAppearanceViewController: UITableViewController {
     }
     */
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
 
         let customized: Bool
         switch cell.reuseIdentifier {
@@ -46,39 +46,39 @@ class UIAppearanceViewController: UITableViewController {
             customized = false
         }
         
-        cell.accessoryType = customized ? .Checkmark : .None
+        cell.accessoryType = customized ? .checkmark : .none
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else {
             fatalError()
         }
         
         let customized: Bool
         switch cell.reuseIdentifier {
         case "NavigationBarTintColorCell"?:
-            customized = self.toggleAppearance(UIColor.redColor(), for: "UINavigationBar.tintColor")
+            customized = self.toggleAppearance(UIColor.red, for: "UINavigationBar.tintColor")
         case "NavigationBarBarTintColorCell"?:
-            customized = self.toggleAppearance(UIColor.yellowColor(), for: "UINavigationBar.barTintColor")
+            customized = self.toggleAppearance(UIColor.yellow, for: "UINavigationBar.barTintColor")
         case "NavigationBarTitleTextColorCell"?:
-            customized = self.toggleAppearance(UIColor.blueColor(), for: "UINavigationBar.titleTextColor")
+            customized = self.toggleAppearance(UIColor.blue, for: "UINavigationBar.titleTextColor")
         default:
             customized = false
         }
 
-        cell.accessoryType = customized ? .Checkmark : .None
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        cell.accessoryType = customized ? .checkmark : .none
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-private extension UIAppearanceViewController {
-    func appearanceCustomized(key: String) -> Bool {
+fileprivate extension UIAppearanceViewController {
+    func appearanceCustomized(_ key: String) -> Bool {
         return UserDefaultsManager.shared.contains(for: key)
     }
     
-    func toggleAppearance(color: UIColor, for key: String) -> Bool {
+    func toggleAppearance(_ color: UIColor, for key: String) -> Bool {
         if self.appearanceCustomized(key) {
             UserDefaultsManager.shared.remove(for: key)
             return false

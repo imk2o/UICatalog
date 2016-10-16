@@ -9,12 +9,12 @@
 import UIKit
 
 class NavigationBarAppearanceViewController: UITableViewController {
-    private let barStyleItems = [
-        ("Default", UIBarStyle.Default),
-        ("Black", UIBarStyle.Black)
+    fileprivate let barStyleItems = [
+        ("Default", UIBarStyle.default),
+        ("Black", UIBarStyle.black)
     ]
     
-    private var statusBarHidden: Bool = false
+    fileprivate var statusBarHidden: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class NavigationBarAppearanceViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         switch cell.reuseIdentifier {
         case "BarStyleCell"?:
@@ -39,12 +39,12 @@ class NavigationBarAppearanceViewController: UITableViewController {
                 cell.detailTextLabel?.text = $0.0
             }
         case "TranslucentCell"?:
-            if let translucent = self.navigationController?.navigationBar.translucent {
-                cell.accessoryType = translucent ? .Checkmark : .None
+            if let translucent = self.navigationController?.navigationBar.isTranslucent {
+                cell.accessoryType = translucent ? .checkmark : .none
             }
         case "HiddenCell"?:
-            if let hidden = self.navigationController?.navigationBarHidden {
-                cell.accessoryType = hidden ? .Checkmark : .None
+            if let hidden = self.navigationController?.isNavigationBarHidden {
+                cell.accessoryType = hidden ? .checkmark : .none
             }
         default:
             break
@@ -53,8 +53,8 @@ class NavigationBarAppearanceViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else {
             fatalError()
         }
         
@@ -65,33 +65,33 @@ class NavigationBarAppearanceViewController: UITableViewController {
                 cell.detailTextLabel?.text = title
             }
         case "TranslucentCell"?:
-            if let translucent = self.navigationController?.navigationBar.translucent {
-                self.navigationController?.navigationBar.translucent = !translucent
-                cell.accessoryType = !translucent ? .Checkmark : .None
+            if let translucent = self.navigationController?.navigationBar.isTranslucent {
+                self.navigationController?.navigationBar.isTranslucent = !translucent
+                cell.accessoryType = !translucent ? .checkmark : .none
             }
         case "NavigationBarTintColorCell"?:
-            self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+            self.navigationController?.navigationBar.tintColor = UIColor.red
         case "NavigationBarBarTintColorCell"?:
-            self.navigationController?.navigationBar.barTintColor = UIColor.yellowColor()
+            self.navigationController?.navigationBar.barTintColor = UIColor.yellow
         case "NavigationBarTitleTextColorCell"?:
-            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blue]
         case "HiddenCell"?:
-            if let hidden = self.navigationController?.navigationBarHidden {
+            if let hidden = self.navigationController?.isNavigationBarHidden {
                 self.navigationController?.setNavigationBarHidden(!hidden, animated: true)
-                cell.accessoryType = !hidden ? .Checkmark : .None
+                cell.accessoryType = !hidden ? .checkmark : .none
             }
         case "StatusBarHiddenCell"?:
             self.statusBarHidden = !self.statusBarHidden
             self.setNeedsStatusBarAppearanceUpdate()
-            cell.accessoryType = self.statusBarHidden ? .Checkmark : .None
+            cell.accessoryType = self.statusBarHidden ? .checkmark : .none
         default:
             break
         }
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return self.statusBarHidden
     }
 }

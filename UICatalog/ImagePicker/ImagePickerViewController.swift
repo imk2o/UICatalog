@@ -24,21 +24,21 @@ class ImagePickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pickImageDidTap(sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+    @IBAction func pickImageDidTap(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "ライブラリから選択", style: .Default) { (action) in
+        actionSheet.addAction(UIAlertAction(title: "ライブラリから選択", style: .default) { (action) in
             self.requestPickImageFromPhotoLibrary()
             }
         )
-        actionSheet.addAction(UIAlertAction(title: "カメラで撮影", style: .Default) { (action) in
+        actionSheet.addAction(UIAlertAction(title: "カメラで撮影", style: .default) { (action) in
             self.requestPickImageFromCamera()
             }
         )
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+        self.present(actionSheet, animated: true, completion: nil)
     }
 
     /*
@@ -53,17 +53,17 @@ class ImagePickerViewController: UIViewController {
 
 }
 
-private extension ImagePickerViewController {
+fileprivate extension ImagePickerViewController {
     // カメラで撮影
     func requestPickImageFromCamera() {
-        guard UIImagePickerController.isSourceTypeAvailable(.Camera) else {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
             return
         }
         
-        AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo) { [weak self] (result) in
+        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] (result) in
             if result {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self?.pickImage(from: .Camera)
+                DispatchQueue.main.async {
+                    self?.pickImage(from: .camera)
                 }
             }
         }
@@ -71,14 +71,14 @@ private extension ImagePickerViewController {
     
     // 写真ライブラリから選択
     func requestPickImageFromPhotoLibrary() {
-        guard UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) else {
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             return
         }
         
         PHPhotoLibrary.requestAuthorization { [weak self] (status) in
-            if status == .Authorized {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self?.pickImage(from: .PhotoLibrary)
+            if status == .authorized {
+                DispatchQueue.main.async {
+                    self?.pickImage(from: .photoLibrary)
                 }
             }
         }
@@ -91,23 +91,23 @@ private extension ImagePickerViewController {
         //imagePickerController.mediaTypes = [kUTTypeImage as String, kUTTypeMovie as String]
         //imagePickerController.allowsEditing = true
         
-        self.presentViewController(imagePickerController, animated: true, completion: nil)
+        self.present(imagePickerController, animated: true, completion: nil)
     }
 }
 
 // MARK: - UIImagePickerControllerDelegate
 extension ImagePickerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             //if let image = info[UIImagePickerControllerEditedImage] as? UIImage {    // cropped image
             self.imageView.image = image
         }
         
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // cancelled
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 }

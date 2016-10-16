@@ -11,14 +11,14 @@ import UIKit
 class ArticleProvider {
     static let shared = ArticleProvider()
 
-    private (set) var articles: [Int: Article] = [:]
+    fileprivate (set) var articles: [Int: Article] = [:]
     
-    private init() {
+    fileprivate init() {
         self.load()
     }
     
     func allArticles() -> [Article] {
-        return self.articles.sort { (pair1, pair2) -> Bool in
+        return self.articles.sorted { (pair1, pair2) -> Bool in
             return pair1.0 < pair2.0
         }.map { (id, article) -> Article in
             return article
@@ -30,12 +30,12 @@ class ArticleProvider {
     }
 }
 
-private extension ArticleProvider {
+fileprivate extension ArticleProvider {
     func load() {
         guard
-            let url = NSBundle.mainBundle().URLForResource("articles", withExtension: "json"),
-            let data = NSData(contentsOfURL: url),
-            let json = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [String: AnyObject]
+            let url = Bundle.main.url(forResource: "articles", withExtension: "json"),
+            let data = try? Data(contentsOf: url),
+            let json = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: AnyObject]
         else {
             return
         }
@@ -53,7 +53,7 @@ private extension ArticleProvider {
     }
 }
 
-private extension Article {
+fileprivate extension Article {
     init(id: Int, json: [String: AnyObject]) {
         self.id = id
         self.title = json["title"] as? String ?? ""

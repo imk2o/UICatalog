@@ -14,7 +14,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         let selectedBackgroundView = UIView(frame: self.bounds)
-        selectedBackgroundView.backgroundColor = UIColor.yellowColor()
+        selectedBackgroundView.backgroundColor = UIColor.yellow
         self.selectedBackgroundView = selectedBackgroundView
     }
 }

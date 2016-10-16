@@ -11,24 +11,24 @@ import AVFoundation
 
 class CodeReaderViewController: UIViewController {
 
-    private let captureSession = AVCaptureSession()
+    fileprivate let captureSession = AVCaptureSession()
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // カメラのセットアップ
-        self.setCameraFace(.Back)
+        self.setCameraFace(.back)
         self.setupCamera()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.captureSession.startRunning()
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         self.captureSession.stopRunning()
@@ -40,8 +40,8 @@ class CodeReaderViewController: UIViewController {
     }
 }
 
-private extension CodeReaderViewController {
-    func setCameraFace(position: AVCaptureDevicePosition) -> Bool {
+fileprivate extension CodeReaderViewController {
+    func setCameraFace(_ position: AVCaptureDevicePosition) -> Bool {
         // position に対するカメラを探す
         guard
             let videoDevice = AVCaptureDevice.captureDevices(for: position).first,
@@ -51,11 +51,11 @@ private extension CodeReaderViewController {
         }
         
         // キャプチャセッションの入力を入れ替え
-        if self.captureSession.running {
+        if self.captureSession.isRunning {
             self.captureSession.beginConfiguration()
         }
         defer {
-            if self.captureSession.running {
+            if self.captureSession.isRunning {
                 self.captureSession.commitConfiguration()
             }
         }
@@ -86,24 +86,24 @@ private extension CodeReaderViewController {
         
         // ビデオキャプチャでフィルタをかけないのであれば、プレビューレイヤを使うほうが簡単
         let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-        previewLayer.connection.videoOrientation = .Portrait
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer?.connection.videoOrientation = .portrait
+        previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         let layerRect = self.view.layer.bounds
-        previewLayer.bounds = layerRect
-        self.view.layer.insertSublayer(previewLayer, below: self.textView.layer)
-        previewLayer.position = CGPoint(x: CGRectGetMidX(layerRect), y: CGRectGetMidY(layerRect))
+        previewLayer?.bounds = layerRect
+        self.view.layer.insertSublayer(previewLayer!, below: self.textView.layer)
+        previewLayer?.position = CGPoint(x: layerRect.midX, y: layerRect.midY)
         
         // バーコードリーダ
         let metadataOutput = AVCaptureMetadataOutput()
         self.captureSession.addOutput(metadataOutput)
-        metadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_queue_create("", DISPATCH_QUEUE_SERIAL))
+        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue(label: "", attributes: []))
         metadataOutput.metadataObjectTypes = metadataOutput.availableMetadataObjectTypes
     }
 }
 
-private extension AVCaptureDevice {
+fileprivate extension AVCaptureDevice {
     static func captureDevices(for position: AVCaptureDevicePosition) -> [AVCaptureDevice] {
-        return self.devicesWithMediaType(AVMediaTypeVideo).flatMap({ (captureDevice) -> AVCaptureDevice? in
+        return self.devices(withMediaType: AVMediaTypeVideo).flatMap({ (captureDevice) -> AVCaptureDevice? in
             guard let captureDevice = captureDevice as? AVCaptureDevice else {
                 return nil
             }
@@ -112,7 +112,7 @@ private extension AVCaptureDevice {
     }
 }
 
-private extension AVCaptureSession {
+fileprivate extension AVCaptureSession {
     func installedCaptureDeviceInputs() -> [AVCaptureDeviceInput] {
         return self.inputs.flatMap({ (input) -> AVCaptureDeviceInput? in
             return input as? AVCaptureDeviceInput
@@ -122,7 +122,7 @@ private extension AVCaptureSession {
 
 // バーコードリーダ
 extension CodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
 
         let codeObjects = metadataObjects.flatMap { (metadataObject) -> AVMetadataMachineReadableCodeObject? in
             return metadataObject as? AVMetadataMachineReadableCodeObject
@@ -140,8 +140,8 @@ extension CodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
     }
     
-    private func showCodeValue(codeValue: String) {
-        dispatch_async(dispatch_get_main_queue()) {
+    fileprivate func showCodeValue(_ codeValue: String) {
+        DispatchQueue.main.async {
             self.textView.text = codeValue
             print(codeValue)
         }

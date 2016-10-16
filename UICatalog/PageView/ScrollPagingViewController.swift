@@ -14,8 +14,8 @@ import UIKit
 // * UIpageViewControllerの参照はprepareForSegueで得る
 // (viewDidLoadより先に呼び出されるので問題ない)
 class ScrollPagingViewController: UIViewController {
-    private var pageViewDataSource: ScrollPagingViewDataSource!
-    private var pageViewController: UIPageViewController!
+    fileprivate var pageViewDataSource: ScrollPagingViewDataSource!
+    fileprivate var pageViewController: UIPageViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +26,15 @@ class ScrollPagingViewController: UIViewController {
         self.pageViewController.delegate = self
         
         // NOTE: Under Top BarsがONのとき、最初のページ表示直後に適用されない問題があるため
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             let firstViewController = self.pageViewDataSource.firstViewController()
-            self.pageViewController.setViewControllers([firstViewController], direction: .Forward, animated: false, completion: nil)
+            self.pageViewController.setViewControllers([firstViewController], direction: .forward, animated: false, completion: nil)
             self.navigationItem.title = firstViewController.title
         }
         
         self.navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(title: ">>", style: .Plain, target: self, action: #selector(toLastPage)),
-            UIBarButtonItem(title: "<<", style: .Plain, target: self, action: #selector(toFirstPage))
+            UIBarButtonItem(title: ">>", style: .plain, target: self, action: #selector(toLastPage)),
+            UIBarButtonItem(title: "<<", style: .plain, target: self, action: #selector(toFirstPage))
         ]
     }
     
@@ -43,9 +43,9 @@ class ScrollPagingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if case .Some("PageViewController") = segue.identifier {
-            guard let pageViewController = segue.destinationViewController as? UIPageViewController else {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case .some("PageViewController") = segue.identifier {
+            guard let pageViewController = segue.destination as? UIPageViewController else {
                 fatalError()
             }
             
@@ -53,19 +53,19 @@ class ScrollPagingViewController: UIViewController {
         }
     }
     
-    func toFirstPage(sender: AnyObject) {
+    func toFirstPage(_ sender: AnyObject) {
         let firstViewController = self.pageViewDataSource.firstViewController()
-        self.pageViewController.setViewControllers([firstViewController], direction: .Reverse, animated: true, completion: nil)
+        self.pageViewController.setViewControllers([firstViewController], direction: .reverse, animated: true, completion: nil)
     }
     
-    func toLastPage(sender: AnyObject) {
+    func toLastPage(_ sender: AnyObject) {
         let lastViewController = self.pageViewDataSource.lastViewController()
-        self.pageViewController.setViewControllers([lastViewController], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers([lastViewController], direction: .forward, animated: true, completion: nil)
     }
 }
 
 extension ScrollPagingViewController: UIPageViewControllerDelegate {
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         // NOTE: self.viewControllers?.firstが現在のページに対応するVC
         self.navigationItem.title = self.pageViewController.viewControllers?.first?.title

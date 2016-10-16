@@ -9,10 +9,10 @@
 import UIKit
 
 class SearchViewDataSource: NSObject, UITableViewDataSource {
-    private(set) var products: [AppleProduct]?
+    fileprivate(set) var products: [AppleProduct]?
     
     func search(
-        keyword: String,
+        _ keyword: String,
         category: AppleProduct.Category? = nil,
         completion: () -> Void
     ) {
@@ -23,17 +23,17 @@ class SearchViewDataSource: NSObject, UITableViewDataSource {
     
     // MARK: UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.products?.count ?? 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        guard let product = self.products?[indexPath.row] else {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let product = self.products?[(indexPath as NSIndexPath).row] else {
             fatalError()
         }
         

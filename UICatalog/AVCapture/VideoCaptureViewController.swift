@@ -11,26 +11,26 @@ import AVFoundation
 
 class VideoCaptureViewController: UIViewController {
 
-    private let captureSession = AVCaptureSession()
+    fileprivate let captureSession = AVCaptureSession()
     @IBOutlet weak var coreImageView: CoreImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.coreImageView.context = EAGLContext(API: .OpenGLES2)
+        self.coreImageView.context = EAGLContext(api: .openGLES2)
         
         // カメラのセットアップ
-        self.setCameraFace(.Back)
+        self.setCameraFace(.back)
         self.setupCamera()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.captureSession.startRunning()
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         self.captureSession.stopRunning()
@@ -42,8 +42,8 @@ class VideoCaptureViewController: UIViewController {
     }
 }
 
-private extension VideoCaptureViewController {
-    func setCameraFace(position: AVCaptureDevicePosition) -> Bool {
+fileprivate extension VideoCaptureViewController {
+    func setCameraFace(_ position: AVCaptureDevicePosition) -> Bool {
         // position に対するカメラを探す
         guard
             let videoDevice = AVCaptureDevice.captureDevices(for: position).first,
@@ -53,11 +53,11 @@ private extension VideoCaptureViewController {
         }
         
         // キャプチャセッションの入力を入れ替え
-        if self.captureSession.running {
+        if self.captureSession.isRunning {
             self.captureSession.beginConfiguration()
         }
         defer {
-            if self.captureSession.running {
+            if self.captureSession.isRunning {
                 self.captureSession.commitConfiguration()
             }
         }
@@ -88,14 +88,14 @@ private extension VideoCaptureViewController {
         
         // ビデオキャプチャ
         let videoOutput = AVCaptureVideoDataOutput()
-        videoOutput.setSampleBufferDelegate(self, queue: dispatch_queue_create("", DISPATCH_QUEUE_SERIAL))
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "", attributes: []))
         self.captureSession.addOutput(videoOutput)
     }
 }
 
-private extension AVCaptureDevice {
+fileprivate extension AVCaptureDevice {
     static func captureDevices(for position: AVCaptureDevicePosition) -> [AVCaptureDevice] {
-        return self.devicesWithMediaType(AVMediaTypeVideo).flatMap({ (captureDevice) -> AVCaptureDevice? in
+        return self.devices(withMediaType: AVMediaTypeVideo).flatMap({ (captureDevice) -> AVCaptureDevice? in
             guard let captureDevice = captureDevice as? AVCaptureDevice else {
                 return nil
             }
@@ -104,7 +104,7 @@ private extension AVCaptureDevice {
     }
 }
 
-private extension AVCaptureSession {
+fileprivate extension AVCaptureSession {
     func installedCaptureDeviceInputs() -> [AVCaptureDeviceInput] {
         return self.inputs.flatMap({ (input) -> AVCaptureDeviceInput? in
             return input as? AVCaptureDeviceInput
@@ -114,17 +114,17 @@ private extension AVCaptureSession {
 
 // ビデオキャプチャ
 extension VideoCaptureViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
-        let captureImage = CIImage(CVPixelBuffer: pixelBuffer)
+        let captureImage = CIImage(cvPixelBuffer: pixelBuffer)
         
         // カメラに応じた回転補正をかける(Portraitに合わせている)
-        var transform = CGAffineTransformMakeRotation(-CGFloat(M_PI_2))		// Back camera
+        let transform = CGAffineTransform(rotationAngle: -CGFloat(M_PI_2))		// Back camera
         //transform = CGAffineTransformScale(transform, 1, -1)				// Front camera
-        let transformedImage = captureImage.imageByApplyingTransform(transform)
+        let transformedImage = captureImage.applying(transform)
         
         // Core Imageでフィルタを適用
         let sepiaFilter = CIFilter(name: "CISepiaTone")!
@@ -145,12 +145,12 @@ class CoreImageView: GLKView {
     
     override var context: EAGLContext {
         didSet {
-            self.ciContext = CIContext(EAGLContext: self.context)
+            self.ciContext = CIContext(eaglContext: self.context)
         }
     }
-    private var ciContext: CIContext?
+    fileprivate var ciContext: CIContext?
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         guard
             let image = self.image,
             let ciContext = self.ciContext
@@ -159,8 +159,8 @@ class CoreImageView: GLKView {
         }
         
         let scale = self.window?.screen.scale ?? 1.0
-        let screenScaledBounds = CGRectApplyAffineTransform(self.bounds, CGAffineTransformMakeScale(scale, scale))
-        let aspectFitRect = AVMakeRectWithAspectRatioInsideRect(image.extent.size, screenScaledBounds)
-        ciContext.drawImage(image, inRect: aspectFitRect, fromRect: image.extent)
+        let screenScaledBounds = self.bounds.applying(CGAffineTransform(scaleX: scale, y: scale))
+        let aspectFitRect = AVMakeRect(aspectRatio: image.extent.size, insideRect: screenScaledBounds)
+        ciContext.draw(image, in: aspectFitRect, from: image.extent)
     }
 }

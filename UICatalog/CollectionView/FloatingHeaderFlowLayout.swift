@@ -11,37 +11,37 @@ import UIKit
 /// ヘッダビューを上部に固定表示するカスタムレイアウト
 /// (参考: https://github.com/griffin-stewie/CSNFloatingHeaderViewFlowLayout)
 class FloatingHeaderFlowLayout: UICollectionViewFlowLayout {
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard
             let collectionView = self.collectionView,
-            var answer = super.layoutAttributesForElementsInRect(rect)
+            var answer = super.layoutAttributesForElements(in: rect)
         else {
-            return super.layoutAttributesForElementsInRect(rect)
+            return super.layoutAttributesForElements(in: rect)
         }
         let contentOffset = collectionView.contentOffset
         var missingSections = Set<Int>()
 
         for layoutAttributes in answer {
             if
-                layoutAttributes.representedElementCategory == UICollectionElementCategory.Cell &&
+                layoutAttributes.representedElementCategory == UICollectionElementCategory.cell &&
                 layoutAttributes.representedElementKind != UICollectionElementKindSectionHeader
             {
-                missingSections.insert(layoutAttributes.indexPath.section)
+                missingSections.insert((layoutAttributes.indexPath as NSIndexPath).section)
             }
         }
 
         let appendSectionLayoutAttributes = missingSections.flatMap { (section) -> UICollectionViewLayoutAttributes? in
-            let indexPath = NSIndexPath(forItem: 0, inSection: section)
-            return self.layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: indexPath)
+            let indexPath = IndexPath(item: 0, section: section)
+            return self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: indexPath)
         }
-        answer.appendContentsOf(appendSectionLayoutAttributes)
+        answer.append(contentsOf: appendSectionLayoutAttributes)
         
         for layoutAttributes in answer where layoutAttributes.representedElementKind == UICollectionElementKindSectionHeader {
-            let section = layoutAttributes.indexPath.section
-            let numberOfItemsInSection = collectionView.numberOfItemsInSection(section)
+            let section = (layoutAttributes.indexPath as NSIndexPath).section
+            let numberOfItemsInSection = collectionView.numberOfItems(inSection: section)
             
-            let firstObjectIndexPath = NSIndexPath(forItem:0, inSection:section)
-            let lastObjectIndexPath = NSIndexPath(forItem:max(0, numberOfItemsInSection - 1), inSection:section)
+            let firstObjectIndexPath = IndexPath(item:0, section:section)
+            let lastObjectIndexPath = IndexPath(item:max(0, numberOfItemsInSection - 1), section:section)
 
             // セクション内の最初と最後の要素を求める
             let cellsExist: Bool
@@ -49,12 +49,12 @@ class FloatingHeaderFlowLayout: UICollectionViewFlowLayout {
             let lastObjectAttrs: UICollectionViewLayoutAttributes
             if numberOfItemsInSection > 0 { // use cell data if items exist
                 cellsExist = true
-                firstObjectAttrs = self.layoutAttributesForItemAtIndexPath(firstObjectIndexPath)!
-                lastObjectAttrs = self.layoutAttributesForItemAtIndexPath(lastObjectIndexPath)!
+                firstObjectAttrs = self.layoutAttributesForItem(at: firstObjectIndexPath)!
+                lastObjectAttrs = self.layoutAttributesForItem(at: lastObjectIndexPath)!
             } else { // else use the header and footer
                 cellsExist = false
-                firstObjectAttrs = self.layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath:firstObjectIndexPath)!
-                lastObjectAttrs = self.layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionFooter, atIndexPath:lastObjectIndexPath)!
+                firstObjectAttrs = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at:firstObjectIndexPath)!
+                lastObjectAttrs = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionFooter, at:lastObjectIndexPath)!
             }
 
             // ヘッダ位置を調整
@@ -68,9 +68,9 @@ class FloatingHeaderFlowLayout: UICollectionViewFlowLayout {
             origin.y = min(
                 max(
                     contentOffset.y + collectionView.contentInset.top,
-                    CGRectGetMinY(firstObjectAttrs.frame) - topHeaderHeight - sectionInset.top
+                    firstObjectAttrs.frame.minY - topHeaderHeight - sectionInset.top
                 ),
-                CGRectGetMaxY(lastObjectAttrs.frame) - bottomHeaderHeight + sectionInset.bottom
+                lastObjectAttrs.frame.maxY - bottomHeaderHeight + sectionInset.bottom
             )
             
             layoutAttributes.zIndex = 1024		// FIXME self.headerViewZIndex;
@@ -80,7 +80,7 @@ class FloatingHeaderFlowLayout: UICollectionViewFlowLayout {
         return answer
     }
 
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 }

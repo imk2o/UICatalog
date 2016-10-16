@@ -11,14 +11,14 @@ import UIKit
 class AppleProductProvider {
     static let shared = AppleProductProvider()
     
-    private (set) var products: [Int: AppleProduct] = [:]
+    fileprivate (set) var products: [Int: AppleProduct] = [:]
     
-    private init() {
+    fileprivate init() {
         self.load()
     }
     
     func allProducts() -> [AppleProduct] {
-        return self.products.sort { (pair1, pair2) -> Bool in
+        return self.products.sorted { (pair1, pair2) -> Bool in
             return pair1.0 < pair2.0
             }.map { (id, product) -> AppleProduct in
                 return product
@@ -44,12 +44,12 @@ class AppleProductProvider {
     }
 }
 
-private extension AppleProductProvider {
+fileprivate extension AppleProductProvider {
     func load() {
         guard
-            let url = NSBundle.mainBundle().URLForResource("products", withExtension: "json"),
-            let data = NSData(contentsOfURL: url),
-            let json = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [String: AnyObject]
+            let url = Bundle.main.url(forResource: "products", withExtension: "json"),
+            let data = try? Data(contentsOf: url),
+            let json = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: AnyObject]
             else {
                 return
         }
@@ -67,7 +67,7 @@ private extension AppleProductProvider {
     }
 }
 
-private extension AppleProduct {
+fileprivate extension AppleProduct {
     init(id: Int, json: [String: AnyObject]) {
         self.id = id
         self.name = json["name"] as? String ?? ""
@@ -76,8 +76,8 @@ private extension AppleProduct {
     }
 }
 
-private extension String {
-    func caseInsensitiveContainsString(other: String) -> Bool {
-        return self.lowercaseString.containsString(other.lowercaseString)
+fileprivate extension String {
+    func caseInsensitiveContainsString(_ other: String) -> Bool {
+        return self.lowercased().contains(other.lowercased())
     }
 }

@@ -9,12 +9,12 @@
 import UIKit
 
 class PageContentViewController: UIViewController {
-    private(set) var pageIndex: Int!
-    private var image: UIImage?
+    fileprivate(set) var pageIndex: Int!
+    fileprivate var image: UIImage?
     
     @IBOutlet weak var imageView: UIImageView!
     
-    private var pageNumber: Int {
+    fileprivate var pageNumber: Int {
         return self.pageIndex + 1
     }
 
