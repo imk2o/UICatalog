@@ -28,6 +28,8 @@
 		B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B481D66999E00973ED5 /* AppleProductProvider.swift */; };
 		B1235B4B1D669AEC00973ED5 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B1235B4A1D669AEC00973ED5 /* products.json */; };
 		B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */; };
+		B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13402131DB362D400B9FC59 /* Transition.storyboard */; };
+		B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */; };
 		B135177F1D67DE9700CC513D /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B135177D1D67DE9700CC513D /* TextView.storyboard */; };
 		B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13517801D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift */; };
 		B13517851D6EB22100CC513D /* ImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13517831D6EB22100CC513D /* ImagePicker.storyboard */; };
@@ -56,6 +58,8 @@
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
 		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
+		B1B4CBD31DB6F2EB000F0094 /* TransitionCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CBD21DB6F2EB000F0094 /* TransitionCoverViewController.swift */; };
+		B1B4CC0F1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CC0E1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,8 @@
 		B1235B481D66999E00973ED5 /* AppleProductProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleProductProvider.swift; path = AppleProduct/AppleProductProvider.swift; sourceTree = "<group>"; };
 		B1235B4A1D669AEC00973ED5 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = AppleProduct/products.json; sourceTree = "<group>"; };
 		B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewDataSource.swift; path = Search/SearchViewDataSource.swift; sourceTree = "<group>"; };
+		B13402131DB362D400B9FC59 /* Transition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Transition.storyboard; path = Transition/Transition.storyboard; sourceTree = "<group>"; };
+		B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemiCoveredTransitionViewController.swift; path = Transition/SemiCoveredTransitionViewController.swift; sourceTree = "<group>"; };
 		B135177E1D67DE9700CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TextView.storyboard; sourceTree = "<group>"; };
 		B13517801D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewScrollOrNotViewController.swift; path = TextView/TextViewScrollOrNotViewController.swift; sourceTree = "<group>"; };
 		B13517841D6EB22100CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ImagePicker.storyboard; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1B4CBD21DB6F2EB000F0094 /* TransitionCoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionCoverViewController.swift; path = Transition/TransitionCoverViewController.swift; sourceTree = "<group>"; };
+		B1B4CC0E1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemiCoveredPresentationTransition.swift; path = Transition/SemiCoveredPresentationTransition.swift; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +239,17 @@
 			name = AppleProduct;
 			sourceTree = "<group>";
 		};
+		B13402121DB362AD00B9FC59 /* Transision */ = {
+			isa = PBXGroup;
+			children = (
+				B13402131DB362D400B9FC59 /* Transition.storyboard */,
+				B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */,
+				B1B4CBD21DB6F2EB000F0094 /* TransitionCoverViewController.swift */,
+				B1B4CC0E1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift */,
+			);
+			name = Transision;
+			sourceTree = "<group>";
+		};
 		B135177C1D67DE8000CC513D /* TextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +326,7 @@
 				B13517881D6EB6A800CC513D /* AVCapture */,
 				B13517AA1D7BE59200CC513D /* Appearance */,
 				B1AA131C1D86775E00D7D0A5 /* VisualEffectView */,
+				B13402121DB362AD00B9FC59 /* Transision */,
 				B1FFECB11D7BEBFE00522F51 /* Misc */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
@@ -489,6 +509,7 @@
 				B135177F1D67DE9700CC513D /* TextView.storyboard in Resources */,
 				B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */,
 				B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */,
+				B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */,
 				B16BB9C51D13AB91007BA1CF /* TableView.storyboard in Resources */,
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
@@ -527,12 +548,14 @@
 				B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */,
 				B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */,
 				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
+				B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
 				B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */,
 				B16BB9CF1D13AF97007BA1CF /* Article.swift in Sources */,
 				B13517871D6EB28800CC513D /* ImagePickerViewController.swift in Sources */,
 				B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
+				B1B4CBD31DB6F2EB000F0094 /* TransitionCoverViewController.swift in Sources */,
 				B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
 				B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */,
@@ -544,6 +567,7 @@
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */,
+				B1B4CC0F1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift in Sources */,
 				B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */,
 				B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */,
 				B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */,

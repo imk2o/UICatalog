@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Semi Covered Transition-->
+        <scene sceneID="6IK-PP-dUs">
+            <objects>
+                <viewController storyboardIdentifier="SemiCoveredTransitionView" id="oWo-rU-5Fv" customClass="SemiCoveredTransitionViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M25-JW-nF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="cTq-Iv-J97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zda-hD-O7M">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YG-Ny-JAE">
+                                <state key="normal" title="Bottom"/>
+                                <connections>
+                                    <segue destination="Z2d-mj-rDK" kind="presentation" identifier="PresentFromBottom" id="0fU-qZ-apz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-Dw-jOk">
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="Z2d-mj-rDK" kind="presentation" identifier="PresentFromTop" id="ARv-0Z-YJn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD0-KY-VEB">
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <segue destination="Z2d-mj-rDK" kind="presentation" identifier="PresentFromLeft" id="Cqj-Zx-Hnb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeJ-51-553">
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <segue destination="Z2d-mj-rDK" kind="presentation" identifier="PresentFromRight" id="wfz-Qk-JwB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zrg-Dw-jOk" firstAttribute="centerX" secondItem="Zda-hD-O7M" secondAttribute="centerX" id="6WT-et-Hjl"/>
+                            <constraint firstItem="EeJ-51-553" firstAttribute="centerY" secondItem="Zda-hD-O7M" secondAttribute="centerY" id="KUe-IU-YY0"/>
+                            <constraint firstItem="zrg-Dw-jOk" firstAttribute="top" secondItem="M25-JW-nF4" secondAttribute="bottom" constant="20" id="Qea-kk-hjj"/>
+                            <constraint firstItem="OD0-KY-VEB" firstAttribute="centerY" secondItem="Zda-hD-O7M" secondAttribute="centerY" id="RHw-h7-P8h"/>
+                            <constraint firstAttribute="trailing" secondItem="EeJ-51-553" secondAttribute="trailing" constant="16" id="V6S-NZ-85K"/>
+                            <constraint firstItem="OD0-KY-VEB" firstAttribute="leading" secondItem="Zda-hD-O7M" secondAttribute="leading" constant="16" id="mcO-my-XkM"/>
+                            <constraint firstItem="cTq-Iv-J97" firstAttribute="top" secondItem="5YG-Ny-JAE" secondAttribute="bottom" constant="20" id="qod-Bn-HU4"/>
+                            <constraint firstItem="5YG-Ny-JAE" firstAttribute="centerX" secondItem="Zda-hD-O7M" secondAttribute="centerX" id="x4U-LF-cXb"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Semi Covered Transition" id="Ktb-3W-r3L"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uL-iF-rEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="158.77061469265368"/>
+        </scene>
+        <!--Transition Cover View Controller-->
+        <scene sceneID="IQF-hE-D67">
+            <objects>
+                <viewController id="Z2d-mj-rDK" customClass="TransitionCoverViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TF3-aJ-qa0"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Cd-fR-cPG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUS-Vf-cEo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8R-eu-JtY">
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="dismiss" destination="Z2d-mj-rDK" eventType="touchUpInside" id="Glt-pE-6UO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9F-aF-2i6">
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5256012082" green="1" blue="0.50194072720000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Cd-fR-cPG" firstAttribute="top" secondItem="o9F-aF-2i6" secondAttribute="bottom" constant="20" id="5md-Op-MNO"/>
+                            <constraint firstItem="o9F-aF-2i6" firstAttribute="top" secondItem="k8R-eu-JtY" secondAttribute="bottom" constant="8" id="6M7-XF-kwB"/>
+                            <constraint firstAttribute="trailing" secondItem="o9F-aF-2i6" secondAttribute="trailing" constant="16" id="9ay-2z-pj7"/>
+                            <constraint firstItem="k8R-eu-JtY" firstAttribute="leading" secondItem="HUS-Vf-cEo" secondAttribute="leading" constant="16" id="Bz1-PL-CYV"/>
+                            <constraint firstItem="k8R-eu-JtY" firstAttribute="top" secondItem="TF3-aJ-qa0" secondAttribute="bottom" constant="20" id="VwC-pi-pJ3"/>
+                            <constraint firstItem="o9F-aF-2i6" firstAttribute="leading" secondItem="HUS-Vf-cEo" secondAttribute="leading" constant="16" id="ggq-ej-X15"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="300"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zo-v7-3zH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="159.22038980509745"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cqj-Zx-Hnb"/>
+    </inferredMetricsTieBreakers>
+</document>
