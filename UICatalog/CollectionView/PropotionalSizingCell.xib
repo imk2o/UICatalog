@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PropotionalSizingCell" customModule="UICatalog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xh0-7M-rE7">
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xh0-7M-rE7" secondAttribute="height" multiplier="1:1" id="nhI-ga-Aqr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE TITLE TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUP-6B-gfH">
+                        <color key="backgroundColor" red="0.5256012082" green="1" blue="0.50194072720000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="SLb-3b-3J0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aUP-6B-gfH" secondAttribute="bottom" id="2JP-uR-cWN"/>
+                <constraint firstItem="aUP-6B-gfH" firstAttribute="top" secondItem="xh0-7M-rE7" secondAttribute="bottom" constant="10" id="AII-0I-mNS"/>
+                <constraint firstItem="aUP-6B-gfH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FGN-Qw-xPS"/>
+                <constraint firstItem="xh0-7M-rE7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gKy-up-U0P"/>
+                <constraint firstAttribute="trailing" secondItem="xh0-7M-rE7" secondAttribute="trailing" id="kV1-M2-a3Z"/>
+                <constraint firstAttribute="trailing" secondItem="aUP-6B-gfH" secondAttribute="trailing" id="kuc-xx-EEg"/>
+                <constraint firstItem="xh0-7M-rE7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w0n-nT-b3Y"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="xh0-7M-rE7" id="YSy-7p-hpR"/>
+                <outlet property="titleLabel" destination="aUP-6B-gfH" id="XLY-ZA-yoH"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

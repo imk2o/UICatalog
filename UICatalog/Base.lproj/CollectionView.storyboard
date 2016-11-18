@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,6 +87,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naw-3d-CKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="331"/>
+        </scene>
+        <!--Propotional Sizing-->
+        <scene sceneID="KjU-31-Xyv">
+            <objects>
+                <viewController storyboardIdentifier="PropotionalSizingView" id="3qg-HH-enV" customClass="PropotionalSizingCollectionViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oik-Uw-ZE6"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5G-wW-8Rm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9K0-EH-nXo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZG7-FV-ZtX">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7zd-d4-UqQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3qg-HH-enV" id="mXs-eX-Vy8"/>
+                                    <outlet property="delegate" destination="3qg-HH-enV" id="U0c-3C-ywI"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZG7-FV-ZtX" firstAttribute="top" secondItem="9K0-EH-nXo" secondAttribute="top" id="4i9-xS-g8U"/>
+                            <constraint firstItem="ZG7-FV-ZtX" firstAttribute="leading" secondItem="9K0-EH-nXo" secondAttribute="leading" id="bdS-Q3-E3O"/>
+                            <constraint firstItem="b5G-wW-8Rm" firstAttribute="top" secondItem="ZG7-FV-ZtX" secondAttribute="bottom" id="kfa-2F-tGx"/>
+                            <constraint firstAttribute="trailing" secondItem="ZG7-FV-ZtX" secondAttribute="trailing" id="uuD-8x-bX2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Propotional Sizing" id="biO-H9-J0J"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZG7-FV-ZtX" id="60s-1g-WhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGs-av-b8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="989.95502248875573"/>
         </scene>
         <!--Horizontal Collection View-->
         <scene sceneID="J4f-A9-b0U">
