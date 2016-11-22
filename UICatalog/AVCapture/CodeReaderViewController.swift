@@ -130,9 +130,9 @@ extension CodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
         for codeObject in codeObjects {
             let value = codeObject.stringValue
             switch codeObject.type {
-            case AVMetadataObjectTypeQRCode:
+            case AVMetadataObjectTypeQRCode?:
                 self.showCodeValue("QRCode: \(value)")
-            case AVMetadataObjectTypeEAN13Code:
+            case AVMetadataObjectTypeEAN13Code?:
                 self.showCodeValue("JANCode: \(value)")
             default:
                 self.showCodeValue("Other: \(value)")
