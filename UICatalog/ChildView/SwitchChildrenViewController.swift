@@ -57,6 +57,15 @@ fileprivate extension SwitchChildrenViewController {
         animated: Bool,
         completion: (() -> Void)? = nil
     ) {
+        // Child view controllerの追加手順
+        // ・self.addChildViewController(childVC)
+        // ・self.view.addSubview(childVC.view)
+        // ・childVC.didMove(toParentViewController: self)
+        //
+        // Child view controllerの削除手順
+        // ・childVC.willMove(toParentViewController: self)
+        // ・childVC.view.removeFromSuperview()
+        // ・childVC.removeFromParentViewController()
         if let oldChildViewController = self.currentChildViewController {
             oldChildViewController.willMove(toParentViewController: self)
             self.addChildViewController(newChildViewController)
@@ -72,6 +81,7 @@ fileprivate extension SwitchChildrenViewController {
                 options: options,
                 animations: nil,
                 completion: { (finished) in
+                    oldChildViewController.view.removeFromSuperview()
                     oldChildViewController.removeFromParentViewController()
                     newChildViewController.didMove(toParentViewController: self)
                     completion?()
