@@ -52,7 +52,7 @@ extension SelfSizingCellTableViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ArticleTableViewCell else {
             fatalError()
         }
-        let article = self.articles[(indexPath as NSIndexPath).row]
+        let article = self.articles[indexPath.row]
         
         cell.configure(with: article)
         

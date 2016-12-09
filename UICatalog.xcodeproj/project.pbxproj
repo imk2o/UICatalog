@@ -66,6 +66,13 @@
 		B1F4DC291DDE777000CDCCFF /* PrototypeViewSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4DC281DDE777000CDCCFF /* PrototypeViewSizing.swift */; };
 		B1F4DC2B1DDF23D400CDCCFF /* URLSession+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4DC2A1DDF23D400CDCCFF /* URLSession+DownloadImage.swift */; };
 		B1F4DC2D1DDF258300CDCCFF /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4DC2C1DDF258300CDCCFF /* UIImageView+URL.swift */; };
+		B1F77EC91DF635870089DB9F /* SharedCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77EC81DF635870089DB9F /* SharedCellTableViewController.swift */; };
+		B1F77ECB1DF635990089DB9F /* SharedCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77ECA1DF635990089DB9F /* SharedCellCollectionViewController.swift */; };
+		B1F77ECD1DF635B40089DB9F /* SharedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77ECC1DF635B40089DB9F /* SharedCell.swift */; };
+		B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F77ECE1DF635CA0089DB9F /* SharedCell.xib */; };
+		B1F77ED11DF637050089DB9F /* SharedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77ED01DF637050089DB9F /* SharedTableViewCell.swift */; };
+		B1F77ED31DF637170089DB9F /* SharedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77ED21DF637170089DB9F /* SharedCollectionViewCell.swift */; };
+		B1F77ED51DFAD3F80089DB9F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F77ED41DFAD3F80089DB9F /* UIView+Extension.swift */; };
 		B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +159,13 @@
 		B1F4DC281DDE777000CDCCFF /* PrototypeViewSizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrototypeViewSizing.swift; path = CollectionView/PrototypeViewSizing.swift; sourceTree = "<group>"; };
 		B1F4DC2A1DDF23D400CDCCFF /* URLSession+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URLSession+DownloadImage.swift"; path = "Misc/URLSession+DownloadImage.swift"; sourceTree = "<group>"; };
 		B1F4DC2C1DDF258300CDCCFF /* UIImageView+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+URL.swift"; path = "Misc/UIImageView+URL.swift"; sourceTree = "<group>"; };
+		B1F77EC81DF635870089DB9F /* SharedCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedCellTableViewController.swift; path = TableView/SharedCellTableViewController.swift; sourceTree = "<group>"; };
+		B1F77ECA1DF635990089DB9F /* SharedCellCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedCellCollectionViewController.swift; path = TableView/SharedCellCollectionViewController.swift; sourceTree = "<group>"; };
+		B1F77ECC1DF635B40089DB9F /* SharedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedCell.swift; path = TableView/SharedCell.swift; sourceTree = "<group>"; };
+		B1F77ECE1DF635CA0089DB9F /* SharedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SharedCell.xib; path = TableView/SharedCell.xib; sourceTree = "<group>"; };
+		B1F77ED01DF637050089DB9F /* SharedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedTableViewCell.swift; path = TableView/SharedTableViewCell.swift; sourceTree = "<group>"; };
+		B1F77ED21DF637170089DB9F /* SharedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedCollectionViewCell.swift; path = TableView/SharedCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1F77ED41DFAD3F80089DB9F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Misc/UIView+Extension.swift"; sourceTree = "<group>"; };
 		B1FFECB21D7BEC1700522F51 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsManager.swift; path = Misc/UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -378,6 +392,12 @@
 				B16BB9C31D13AB91007BA1CF /* TableView.storyboard */,
 				B16BB9C71D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift */,
 				B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */,
+				B1F77EC81DF635870089DB9F /* SharedCellTableViewController.swift */,
+				B1F77ECA1DF635990089DB9F /* SharedCellCollectionViewController.swift */,
+				B1F77ECC1DF635B40089DB9F /* SharedCell.swift */,
+				B1F77ECE1DF635CA0089DB9F /* SharedCell.xib */,
+				B1F77ED01DF637050089DB9F /* SharedTableViewCell.swift */,
+				B1F77ED21DF637170089DB9F /* SharedCollectionViewCell.swift */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -408,6 +428,7 @@
 				B11703751D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift */,
 				B1F4DC2A1DDF23D400CDCCFF /* URLSession+DownloadImage.swift */,
 				B1F4DC2C1DDF258300CDCCFF /* UIImageView+URL.swift */,
+				B1F77ED41DFAD3F80089DB9F /* UIView+Extension.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -534,6 +555,7 @@
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
 				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
+				B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
 				B13517AD1D7BE5B300CC513D /* Appearance.storyboard in Resources */,
 				B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */,
@@ -566,7 +588,9 @@
 				B13517AF1D7BE62800CC513D /* UIAppearanceViewController.swift in Sources */,
 				B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */,
 				B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */,
+				B1F77ED51DFAD3F80089DB9F /* UIView+Extension.swift in Sources */,
 				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
+				B1F77ED11DF637050089DB9F /* SharedTableViewCell.swift in Sources */,
 				B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */,
 				B1F4DC2D1DDF258300CDCCFF /* UIImageView+URL.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
@@ -575,6 +599,7 @@
 				B13517871D6EB28800CC513D /* ImagePickerViewController.swift in Sources */,
 				B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
+				B1F77EC91DF635870089DB9F /* SharedCellTableViewController.swift in Sources */,
 				B1B4CBD31DB6F2EB000F0094 /* TransitionCoverViewController.swift in Sources */,
 				B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
@@ -585,12 +610,15 @@
 				B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */,
 				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
 				B1F4DC2B1DDF23D400CDCCFF /* URLSession+DownloadImage.swift in Sources */,
+				B1F77ECB1DF635990089DB9F /* SharedCellCollectionViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
 				B1F4DC261DDE76D200CDCCFF /* PropotionalSizingCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */,
 				B1B4CC0F1DBD817D000F0094 /* SemiCoveredPresentationTransition.swift in Sources */,
 				B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */,
+				B1F77ED31DF637170089DB9F /* SharedCollectionViewCell.swift in Sources */,
+				B1F77ECD1DF635B40089DB9F /* SharedCell.swift in Sources */,
 				B1F4DC231DDE76AD00CDCCFF /* PropotionalSizingCollectionViewController.swift in Sources */,
 				B1F4DC291DDE777000CDCCFF /* PrototypeViewSizing.swift in Sources */,
 				B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */,
