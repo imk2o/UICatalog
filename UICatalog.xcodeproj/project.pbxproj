@@ -55,6 +55,8 @@
 		B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AA131D1D86777D00D7D0A5 /* VisualEffectView.storyboard */; };
 		B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */; };
 		B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */; };
+		B1AE82851E0CBB320077385A /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AE82831E0CBB320077385A /* ScrollView.storyboard */; };
+		B1AE82871E0CBB520077385A /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */; };
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
 		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
@@ -148,6 +150,8 @@
 		B1AA131E1D86777D00D7D0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VisualEffectView.storyboard; sourceTree = "<group>"; };
 		B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualEffectOverlayViewController.swift; path = VisualEffectView/VisualEffectOverlayViewController.swift; sourceTree = "<group>"; };
 		B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingHeaderFlowLayout.swift; path = CollectionView/FloatingHeaderFlowLayout.swift; sourceTree = "<group>"; };
+		B1AE82841E0CBB320077385A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScrollView.storyboard; sourceTree = "<group>"; };
+		B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicScrollViewController.swift; path = ScrollView/BasicScrollViewController.swift; sourceTree = "<group>"; };
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -349,6 +353,7 @@
 				B1235B341D66896500973ED5 /* ChildView */,
 				B16BB9C61D13AB97007BA1CF /* TableView */,
 				B1235B1C1D6541A000973ED5 /* CollectionView */,
+				B1AE82821E0CBB080077385A /* ScrollView */,
 				B1235B3A1D668ECD00973ED5 /* WebView */,
 				B135177C1D67DE8000CC513D /* TextView */,
 				B1235B3F1D66987200973ED5 /* Search */,
@@ -419,6 +424,15 @@
 				B1AA13201D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift */,
 			);
 			name = VisualEffectView;
+			sourceTree = "<group>";
+		};
+		B1AE82821E0CBB080077385A /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B1AE82831E0CBB320077385A /* ScrollView.storyboard */,
+				B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */,
+			);
+			name = ScrollView;
 			sourceTree = "<group>";
 		};
 		B1FFECB11D7BEBFE00522F51 /* Misc */ = {
@@ -554,6 +568,7 @@
 				B1F4DC271DDE76D200CDCCFF /* PropotionalSizingCell.xib in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
 				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
+				B1AE82851E0CBB320077385A /* ScrollView.storyboard in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
 				B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
@@ -587,6 +602,7 @@
 			files = (
 				B13517AF1D7BE62800CC513D /* UIAppearanceViewController.swift in Sources */,
 				B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */,
+				B1AE82871E0CBB520077385A /* BasicScrollViewController.swift in Sources */,
 				B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */,
 				B1F77ED51DFAD3F80089DB9F /* UIView+Extension.swift in Sources */,
 				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
@@ -767,6 +783,14 @@
 				B1AA131E1D86777D00D7D0A5 /* Base */,
 			);
 			name = VisualEffectView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1AE82831E0CBB320077385A /* ScrollView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1AE82841E0CBB320077385A /* Base */,
+			);
+			name = ScrollView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
