@@ -57,6 +57,10 @@
 		B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */; };
 		B1AE82851E0CBB320077385A /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AE82831E0CBB320077385A /* ScrollView.storyboard */; };
 		B1AE82871E0CBB520077385A /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */; };
+		B1AE828A1E0CC7290077385A /* CustomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AE82891E0CC7290077385A /* CustomView.storyboard */; };
+		B1AE828C1E0CC7420077385A /* DesignedComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */; };
+		B1AE828E1E0CC75F0077385A /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */; };
+		B1AE82901E0CD0AE0077385A /* RoundedRectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */; };
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
 		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
@@ -152,6 +156,10 @@
 		B1AA13221D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingHeaderFlowLayout.swift; path = CollectionView/FloatingHeaderFlowLayout.swift; sourceTree = "<group>"; };
 		B1AE82841E0CBB320077385A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScrollView.storyboard; sourceTree = "<group>"; };
 		B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicScrollViewController.swift; path = ScrollView/BasicScrollViewController.swift; sourceTree = "<group>"; };
+		B1AE82891E0CC7290077385A /* CustomView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CustomView.storyboard; path = DesignedComponents/CustomView.storyboard; sourceTree = "<group>"; };
+		B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignedComponentsViewController.swift; path = DesignedComponents/DesignedComponentsViewController.swift; sourceTree = "<group>"; };
+		B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectButton.swift; path = DesignedComponents/RoundedRectButton.swift; sourceTree = "<group>"; };
+		B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectLabel.swift; path = CustomView/RoundedRectLabel.swift; sourceTree = "<group>"; };
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -346,6 +354,7 @@
 		B16BB9941D13AA46007BA1CF /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
+				B1AE82881E0CC69F0077385A /* CustomView */,
 				B1235B451D66996E00973ED5 /* AppleProduct */,
 				B16BB9CB1D13AEC2007BA1CF /* Article */,
 				B1235B241D65485900973ED5 /* PageView */,
@@ -433,6 +442,17 @@
 				B1AE82861E0CBB520077385A /* BasicScrollViewController.swift */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		B1AE82881E0CC69F0077385A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B1AE82891E0CC7290077385A /* CustomView.storyboard */,
+				B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */,
+				B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */,
+				B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 		B1FFECB11D7BEBFE00522F51 /* Misc */ = {
@@ -560,6 +580,7 @@
 				B13517851D6EB22100CC513D /* ImagePicker.storyboard in Resources */,
 				B16BB99D1D13AA46007BA1CF /* Assets.xcassets in Resources */,
 				B135177F1D67DE9700CC513D /* TextView.storyboard in Resources */,
+				B1AE828A1E0CC7290077385A /* CustomView.storyboard in Resources */,
 				B1AA131F1D86777D00D7D0A5 /* VisualEffectView.storyboard in Resources */,
 				B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */,
 				B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */,
@@ -600,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AE82901E0CD0AE0077385A /* RoundedRectLabel.swift in Sources */,
 				B13517AF1D7BE62800CC513D /* UIAppearanceViewController.swift in Sources */,
 				B1235B471D66998800973ED5 /* AppleProduct.swift in Sources */,
 				B1AE82871E0CBB520077385A /* BasicScrollViewController.swift in Sources */,
@@ -616,6 +638,7 @@
 				B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
 				B1F77EC91DF635870089DB9F /* SharedCellTableViewController.swift in Sources */,
+				B1AE828C1E0CC7420077385A /* DesignedComponentsViewController.swift in Sources */,
 				B1B4CBD31DB6F2EB000F0094 /* TransitionCoverViewController.swift in Sources */,
 				B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
@@ -628,6 +651,7 @@
 				B1F4DC2B1DDF23D400CDCCFF /* URLSession+DownloadImage.swift in Sources */,
 				B1F77ECB1DF635990089DB9F /* SharedCellCollectionViewController.swift in Sources */,
 				B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */,
+				B1AE828E1E0CC75F0077385A /* RoundedRectButton.swift in Sources */,
 				B1F4DC261DDE76D200CDCCFF /* PropotionalSizingCell.swift in Sources */,
 				B16BB9961D13AA46007BA1CF /* AppDelegate.swift in Sources */,
 				B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */,
