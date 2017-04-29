@@ -19,26 +19,19 @@ class ImagePickerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.proposeAction()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func pickImageDidTap(_ sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        actionSheet.addAction(UIAlertAction(title: "ライブラリから選択", style: .default) { (action) in
-            self.requestPickImageFromPhotoLibrary()
-            }
-        )
-        actionSheet.addAction(UIAlertAction(title: "カメラで撮影", style: .default) { (action) in
-            self.requestPickImageFromCamera()
-            }
-        )
-        
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(actionSheet, animated: true, completion: nil)
+        self.proposeAction()
     }
 
     /*
@@ -54,6 +47,23 @@ class ImagePickerViewController: UIViewController {
 }
 
 fileprivate extension ImagePickerViewController {
+    func proposeAction() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "ライブラリから選択", style: .default) { (action) in
+            self.requestPickImageFromPhotoLibrary()
+            }
+        )
+        actionSheet.addAction(UIAlertAction(title: "カメラで撮影", style: .default) { (action) in
+            self.requestPickImageFromCamera()
+            }
+        )
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+    
     // カメラで撮影
     func requestPickImageFromCamera() {
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
@@ -74,6 +84,10 @@ fileprivate extension ImagePickerViewController {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             return
         }
+        
+        // iOS10以降、フォトライブラリへのアクセスには
+        // Info.plistにNSPhotoLibraryUsageDescriptionキーの設定が必須となった
+        // (値は空欄でもOK)
         
         PHPhotoLibrary.requestAuthorization { [weak self] (status) in
             if status == .authorized {
