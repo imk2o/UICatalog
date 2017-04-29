@@ -9,10 +9,68 @@
 import UIKit
 import AVFoundation
 
+enum SimpleFilter {
+    case sepia
+    case blur(CGFloat)
+    case mosaic(CGFloat)
+    case twist(CGFloat, CGFloat)    // radius, angle
+    
+    var name: String {
+        switch self {
+        case .sepia:
+            return "セピア"
+        case .blur:
+            return "ぼかし"
+        case .mosaic:
+            return "モザイク"
+        case .twist:
+            return "渦巻き"
+        }
+    }
+    
+    func ciFilter(center: CGPoint, intensity: CGFloat = 1.0) -> CIFilter {
+        switch self {
+        case .sepia:
+            return CIFilter(
+                name: "CISepiaTone",
+                withInputParameters: [
+                    kCIInputIntensityKey: intensity
+                ]
+            )!
+        case .blur(let size):
+            return CIFilter(
+                name: "CIGaussianBlur",
+                withInputParameters: [
+                    kCIInputRadiusKey: intensity * size
+                ]
+            )!
+        case .mosaic(let size):
+            return CIFilter(
+                name: "CIPixellate",
+                withInputParameters: [
+                    kCIInputScaleKey: (intensity * size) + 1.0
+                ]
+            )!
+        case .twist(let radius, let angle):
+            return CIFilter(
+                name: "CIVortexDistortion",
+                withInputParameters: [
+                    kCIInputCenterKey: CIVector(cgPoint: center),
+//                    kCIInputRadiusKey: intensity * radius,
+                    kCIInputAngleKey: intensity * angle
+                ]
+            )!
+        }
+    }
+}
+
 class VideoCaptureViewController: UIViewController {
 
     fileprivate let captureSession = AVCaptureSession()
+    fileprivate var filter: SimpleFilter = .blur(20)
+    
     @IBOutlet weak var coreImageView: CoreImageView!
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +98,32 @@ class VideoCaptureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func filterButtonDidTap(_ sender: Any) {
+        self.proposeFilter()
+    }
 }
 
 fileprivate extension VideoCaptureViewController {
+    func proposeFilter() {
+        let actionSheet = UIAlertController(title: "Filter", message: nil, preferredStyle: .actionSheet)
+        
+        let filters: [SimpleFilter] = [
+            .sepia,
+            .mosaic(40),
+            .blur(20),
+            .twist(100, CGFloat.pi * 50.0)
+        ]
+        for filter in filters {
+            actionSheet.addAction(UIAlertAction(title: filter.name, style: .default) { (action) in
+                self.filter = filter
+            })
+        }
+        
+        actionSheet.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+    
     func setCameraFace(_ position: AVCaptureDevicePosition) -> Bool {
         // position に対するカメラを探す
         guard
@@ -127,11 +208,17 @@ extension VideoCaptureViewController: AVCaptureVideoDataOutputSampleBufferDelega
         let transformedImage = captureImage.applying(transform)
         
         // Core Imageでフィルタを適用
-        let sepiaFilter = CIFilter(name: "CISepiaTone")!
-        sepiaFilter.setValue(transformedImage, forKey: kCIInputImageKey)
+        let ciFilter = self.filter.ciFilter(
+            center: CGPoint(x: transformedImage.extent.midX, y: transformedImage.extent.midY),
+            intensity: CGFloat(self.slider.value)
+        )
+        ciFilter.setValue(transformedImage, forKey: kCIInputImageKey)
+
+        // 元の画像サイズでcrop
+        let croppedImage = ciFilter.outputImage?.cropping(to: transformedImage.extent)
         
         // UIImageを出力してUIImageViewに表示することもできるが、OpenGLを使うほうが軽量で高速
-        self.coreImageView.image = sepiaFilter.outputImage
+        self.coreImageView.image = croppedImage
     }
 }
 
