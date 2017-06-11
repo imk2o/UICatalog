@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbx-8J-5k2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popover-->
+        <scene sceneID="0H3-aF-XOs">
+            <objects>
+                <viewController storyboardIdentifier="PopoverParentView" id="BHE-tk-RBe" customClass="PopoverParentViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QG0-Tr-gWO"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZH-Yg-nqt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bsT-9A-pfv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTq-q8-F6U">
+                                <rect key="frame" x="144" y="361" width="88" height="30"/>
+                                <state key="normal" title="Pop to Down"/>
+                                <connections>
+                                    <segue destination="GPH-tA-RjP" kind="popoverPresentation" identifier="popToDown" popoverAnchorView="GTq-q8-F6U" id="McD-TE-bTD">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK8-cK-EFJ">
+                                <rect key="frame" x="153" y="275.5" width="69" height="30"/>
+                                <state key="normal" title="Pop to Up"/>
+                                <connections>
+                                    <segue destination="GPH-tA-RjP" kind="popoverPresentation" identifier="popToUp" popoverAnchorView="vK8-cK-EFJ" id="XCh-Ku-ron">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9l-ek-gpg">
+                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0qc-xC-U3L"/>
+                                    <constraint firstAttribute="width" constant="40" id="Dr0-Md-M9Z"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut9-1o-prA">
+                                <rect key="frame" x="16" y="72" width="343" height="142"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">iPhoneでPopover表示するためのStoryboardレイアウト
+・Popover用のVCを作成
+(Use Preferred Explicit Sizeで大きさを設定しておく)
+・Present As PopoverなSegueを作成
+
+VCの実装 (詳細はこのVCの実装コードを参照)
+・UIPopoverPresentationControllerDelegateの実装
+・prepare(for segue:)でもろもろ設定</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GTq-q8-F6U" firstAttribute="top" secondItem="g9l-ek-gpg" secondAttribute="bottom" constant="8" id="DA4-b7-6Sa"/>
+                            <constraint firstItem="g9l-ek-gpg" firstAttribute="centerX" secondItem="vK8-cK-EFJ" secondAttribute="centerX" id="DH9-Qu-dmq"/>
+                            <constraint firstItem="g9l-ek-gpg" firstAttribute="centerX" secondItem="bsT-9A-pfv" secondAttribute="centerX" id="MwV-Td-BaW"/>
+                            <constraint firstItem="Ut9-1o-prA" firstAttribute="top" secondItem="QG0-Tr-gWO" secondAttribute="bottom" constant="8" id="QT8-2J-59u"/>
+                            <constraint firstItem="Ut9-1o-prA" firstAttribute="leading" secondItem="bsT-9A-pfv" secondAttribute="leading" constant="16" id="RUY-ob-I2t"/>
+                            <constraint firstItem="g9l-ek-gpg" firstAttribute="top" secondItem="vK8-cK-EFJ" secondAttribute="bottom" constant="8" id="Stf-9L-31m"/>
+                            <constraint firstItem="g9l-ek-gpg" firstAttribute="centerY" secondItem="bsT-9A-pfv" secondAttribute="centerY" id="dRk-z9-Vqm"/>
+                            <constraint firstItem="GTq-q8-F6U" firstAttribute="centerX" secondItem="g9l-ek-gpg" secondAttribute="centerX" id="gVX-jx-B92"/>
+                            <constraint firstAttribute="trailing" secondItem="Ut9-1o-prA" secondAttribute="trailing" constant="16" id="wHZ-dN-ZqE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Popover" id="suI-ng-wGT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pB-je-N5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="194.75262368815595"/>
+        </scene>
+        <!--Popover Content View Controller-->
+        <scene sceneID="fkx-Ey-f6q">
+            <objects>
+                <viewController id="GPH-tA-RjP" customClass="PopoverContentViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbn-Jg-CiT"/>
+                        <viewControllerLayoutGuide type="bottom" id="lJz-7D-jnb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HBk-FM-j9s">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popover Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-LB-hUm">
+                                <rect key="frame" x="35.5" y="65" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JPF-LB-hUm" firstAttribute="centerX" secondItem="HBk-FM-j9s" secondAttribute="centerX" id="dQt-5y-Pfz"/>
+                            <constraint firstItem="JPF-LB-hUm" firstAttribute="centerY" secondItem="HBk-FM-j9s" secondAttribute="centerY" id="w7k-dx-mJi"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="150"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="150"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrr-lW-KJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="194"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xbo-lc-l9O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbx-8J-5k2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HUC-G4-FG3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BHE-tk-RBe" kind="relationship" relationship="rootViewController" id="kzX-qe-5JE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdY-jf-TrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="194.75262368815595"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="McD-TE-bTD"/>
+    </inferredMetricsTieBreakers>
+</document>
