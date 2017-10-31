@@ -72,7 +72,9 @@ extension GridCollectionViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension GridCollectionViewController: UICollectionViewDelegateFlowLayout {
     fileprivate var numberOfColumns: Int {
-        return 4	// FIXME
+        let flowLayout = self.collectionView.collectionViewLayout as! CollectionViewFlowLayoutWithDecorations
+        
+        return flowLayout.numberOfColumns
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,7 +84,14 @@ extension GridCollectionViewController: UICollectionViewDelegateFlowLayout {
         
         // 画面サイズに関係なく、列数がnumberOfColumnsになるよう、セルサイズを調整
         let numberOfSpaces = self.numberOfColumns - 1
-        let size = (self.view.bounds.width - (flowLayout.minimumInteritemSpacing * CGFloat(numberOfSpaces))) / CGFloat(self.numberOfColumns)
+        let size = ((
+            self.view.bounds.width -
+                (
+                    flowLayout.sectionInset.left + flowLayout.sectionInset.right +
+                    flowLayout.minimumInteritemSpacing * CGFloat(numberOfSpaces)
+                )
+            ) / CGFloat(self.numberOfColumns))
+            .rounded(.down)
         
         return CGSize(width: size, height: size)
     }
