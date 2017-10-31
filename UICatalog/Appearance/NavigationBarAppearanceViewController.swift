@@ -74,7 +74,7 @@ class NavigationBarAppearanceViewController: UITableViewController {
         case "NavigationBarBarTintColorCell"?:
             self.navigationController?.navigationBar.barTintColor = UIColor.yellow
         case "NavigationBarTitleTextColorCell"?:
-            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blue]
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.blue]
         case "HiddenCell"?:
             if let hidden = self.navigationController?.isNavigationBarHidden {
                 self.navigationController?.setNavigationBarHidden(!hidden, animated: true)

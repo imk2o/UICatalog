@@ -30,8 +30,8 @@ extension PrototypeViewSizing where Self: UICollectionViewCell {
         
         return self.systemLayoutSizeFitting(
             UILayoutFittingExpandedSize,
-            withHorizontalFittingPriority: UILayoutPriorityRequired,
-            verticalFittingPriority: UILayoutPriorityDefaultLow
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .defaultLow
         )
     }
     

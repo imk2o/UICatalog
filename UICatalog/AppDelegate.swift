@@ -53,7 +53,7 @@ fileprivate extension AppDelegate {
             UINavigationBar.appearance().barTintColor = barTintColor
         }
         if let titleTextColor: UIColor = UserDefaultsManager.shared.value(for: "UINavigationBar.titleTextColor") {
-            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: titleTextColor]
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: titleTextColor]
         }
     }
 }

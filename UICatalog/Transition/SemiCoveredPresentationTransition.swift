@@ -111,7 +111,7 @@ class SemiCoveredPresentationController: UIPresentationController {
     override func containerViewDidLayoutSubviews() {
     }
     
-    func overlayViewDidTouch() {
+    @objc func overlayViewDidTouch() {
         self.presentedViewController.dismiss(animated: true, completion: nil)
     }
 }

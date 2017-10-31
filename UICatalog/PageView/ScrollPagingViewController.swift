@@ -53,12 +53,12 @@ class ScrollPagingViewController: UIViewController {
         }
     }
     
-    func toFirstPage(_ sender: AnyObject) {
+    @objc func toFirstPage(_ sender: AnyObject) {
         let firstViewController = self.pageViewDataSource.firstViewController()
         self.pageViewController.setViewControllers([firstViewController], direction: .reverse, animated: true, completion: nil)
     }
     
-    func toLastPage(_ sender: AnyObject) {
+    @objc func toLastPage(_ sender: AnyObject) {
         let lastViewController = self.pageViewDataSource.lastViewController()
         self.pageViewController.setViewControllers([lastViewController], direction: .forward, animated: true, completion: nil)
     }

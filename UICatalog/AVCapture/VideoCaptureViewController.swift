@@ -75,7 +75,7 @@ class VideoCaptureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.coreImageView.context = EAGLContext(api: .openGLES2)
+        self.coreImageView.context = EAGLContext(api: .openGLES2)!
         
         // カメラのセットアップ
         self.setCameraFace(.back)
@@ -124,7 +124,7 @@ fileprivate extension VideoCaptureViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
-    func setCameraFace(_ position: AVCaptureDevicePosition) -> Bool {
+    func setCameraFace(_ position: AVCaptureDevice.Position) -> Bool {
         // position に対するカメラを探す
         guard
             let videoDevice = AVCaptureDevice.captureDevices(for: position).first,
@@ -163,8 +163,8 @@ fileprivate extension VideoCaptureViewController {
     }
     
     func setupCamera() {
-        if self.captureSession.canSetSessionPreset(AVCaptureSessionPresetMedium) {
-            self.captureSession.sessionPreset = AVCaptureSessionPresetMedium
+        if self.captureSession.canSetSessionPreset(.medium) {
+            self.captureSession.sessionPreset = .medium
         }
         
         // ビデオキャプチャ
@@ -175,8 +175,8 @@ fileprivate extension VideoCaptureViewController {
 }
 
 fileprivate extension AVCaptureDevice {
-    static func captureDevices(for position: AVCaptureDevicePosition) -> [AVCaptureDevice] {
-        return self.devices(withMediaType: AVMediaTypeVideo).flatMap({ (captureDevice) -> AVCaptureDevice? in
+    static func captureDevices(for position: AVCaptureDevice.Position) -> [AVCaptureDevice] {
+        return AVCaptureDevice.devices(for: .video).flatMap({ (captureDevice) -> AVCaptureDevice? in
             guard let captureDevice = captureDevice as? AVCaptureDevice else {
                 return nil
             }
@@ -195,7 +195,7 @@ fileprivate extension AVCaptureSession {
 
 // ビデオキャプチャ
 extension VideoCaptureViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
@@ -203,9 +203,9 @@ extension VideoCaptureViewController: AVCaptureVideoDataOutputSampleBufferDelega
         let captureImage = CIImage(cvPixelBuffer: pixelBuffer)
         
         // カメラに応じた回転補正をかける(Portraitに合わせている)
-        let transform = CGAffineTransform(rotationAngle: -CGFloat(M_PI_2))		// Back camera
+        let transform = CGAffineTransform(rotationAngle: -(CGFloat.pi / 2))	// Back camera
         //transform = CGAffineTransformScale(transform, 1, -1)				// Front camera
-        let transformedImage = captureImage.applying(transform)
+        let transformedImage = captureImage.transformed(by: transform)
         
         // Core Imageでフィルタを適用
         let ciFilter = self.filter.ciFilter(
@@ -215,7 +215,7 @@ extension VideoCaptureViewController: AVCaptureVideoDataOutputSampleBufferDelega
         ciFilter.setValue(transformedImage, forKey: kCIInputImageKey)
 
         // 元の画像サイズでcrop
-        let croppedImage = ciFilter.outputImage?.cropping(to: transformedImage.extent)
+        let croppedImage = ciFilter.outputImage?.cropped(to: transformedImage.extent)
         
         // UIImageを出力してUIImageViewに表示することもできるが、OpenGLを使うほうが軽量で高速
         self.coreImageView.image = croppedImage
