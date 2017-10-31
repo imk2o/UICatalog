@@ -67,7 +67,7 @@ fileprivate extension ImagePickerViewController {
             return
         }
         
-        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] (result) in
+        AVCaptureDevice.requestAccess(for: .video) { [weak self] (result) in
             if result {
                 DispatchQueue.main.async {
                     self?.pickImage(from: .camera)

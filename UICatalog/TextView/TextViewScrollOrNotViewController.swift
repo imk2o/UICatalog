@@ -84,7 +84,7 @@ fileprivate extension TextViewScrollOrNotViewController {
             let URLString = "https://www.google.com/search?q=\(keyword)".removingPercentEncoding
 
             let URL = Foundation.URL(string: URLString!)!
-            attributedString.addAttribute(NSLinkAttributeName, value: URL, range: match.range)
+            attributedString.addAttribute(.link, value: URL, range: match.range)
         }
         
         self.outputTextView.attributedText = attributedString
