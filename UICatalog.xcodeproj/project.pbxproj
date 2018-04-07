@@ -67,6 +67,8 @@
 		B1AE828C1E0CC7420077385A /* DesignedComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */; };
 		B1AE828E1E0CC75F0077385A /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */; };
 		B1AE82901E0CD0AE0077385A /* RoundedRectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */; };
+		B1B19D0D20789DA100F67BD6 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B19D0B20789DA100F67BD6 /* MapView.storyboard */; };
+		B1B19D0F20789F3B00F67BD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */; };
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
 		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
@@ -172,6 +174,8 @@
 		B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignedComponentsViewController.swift; path = DesignedComponents/DesignedComponentsViewController.swift; sourceTree = "<group>"; };
 		B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectButton.swift; path = DesignedComponents/RoundedRectButton.swift; sourceTree = "<group>"; };
 		B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectLabel.swift; path = CustomView/RoundedRectLabel.swift; sourceTree = "<group>"; };
+		B1B19D0C20789DA100F67BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MapView.storyboard; sourceTree = "<group>"; };
+		B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapView/MapViewController.swift; sourceTree = "<group>"; };
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1140F5420789D4900CD4597 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				B1B19D0B20789DA100F67BD6 /* MapView.storyboard */,
+				B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
 		B1235B1C1D6541A000973ED5 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +382,7 @@
 		B16BB9941D13AA46007BA1CF /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
+				B1140F5420789D4900CD4597 /* MapView */,
 				B19BF3E21EED2D2A00713843 /* Popover */,
 				B1AE82881E0CC69F0077385A /* CustomView */,
 				B1235B451D66996E00973ED5 /* AppleProduct */,
@@ -623,6 +637,7 @@
 				B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
 				B13517AD1D7BE5B300CC513D /* Appearance.storyboard in Resources */,
+				B1B19D0D20789DA100F67BD6 /* MapView.storyboard in Resources */,
 				B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */,
 				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
@@ -659,6 +674,7 @@
 				B1F77ED51DFAD3F80089DB9F /* UIView+Extension.swift in Sources */,
 				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
 				B1F77ED11DF637050089DB9F /* SharedTableViewCell.swift in Sources */,
+				B1B19D0F20789F3B00F67BD6 /* MapViewController.swift in Sources */,
 				B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */,
 				B1F4DC2D1DDF258300CDCCFF /* UIImageView+URL.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
@@ -847,6 +863,14 @@
 				B1AE82841E0CBB320077385A /* Base */,
 			);
 			name = ScrollView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1B19D0B20789DA100F67BD6 /* MapView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1B19D0C20789DA100F67BD6 /* Base */,
+			);
+			name = MapView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

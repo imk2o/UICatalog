@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View-->
+        <scene sceneID="7Mb-XC-cxj">
+            <objects>
+                <viewController storyboardIdentifier="MapView" id="dc8-g8-16G" customClass="MapViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNm-kj-zYn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jr5-uJ-Ys4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dc8-g8-16G" id="Ubi-iO-AUf"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jr5-uJ-Ys4" secondAttribute="trailing" id="Qu5-XP-Ryz"/>
+                            <constraint firstItem="Jr5-uJ-Ys4" firstAttribute="top" secondItem="cNm-kj-zYn" secondAttribute="top" id="YAn-vB-4x5"/>
+                            <constraint firstAttribute="bottom" secondItem="Jr5-uJ-Ys4" secondAttribute="bottom" id="sOr-rI-Fm8"/>
+                            <constraint firstItem="Jr5-uJ-Ys4" firstAttribute="leading" secondItem="cNm-kj-zYn" secondAttribute="leading" id="wim-hL-IzG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Chv-jr-zeN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map View" id="t12-2m-yoP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="Jr5-uJ-Ys4" id="yBc-DH-Qec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRa-b0-wQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="205.54722638680661"/>
+        </scene>
+    </scenes>
+</document>
