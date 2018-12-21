@@ -30,6 +30,7 @@
 		B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B481D66999E00973ED5 /* AppleProductProvider.swift */; };
 		B1235B4B1D669AEC00973ED5 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B1235B4A1D669AEC00973ED5 /* products.json */; };
 		B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */; };
+		B12EE8B221965B1800066282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EE8B121965B1800066282 /* MainViewController.swift */; };
 		B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13402131DB362D400B9FC59 /* Transition.storyboard */; };
 		B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */; };
 		B135177F1D67DE9700CC513D /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B135177D1D67DE9700CC513D /* TextView.storyboard */; };
@@ -131,6 +132,7 @@
 		B1235B481D66999E00973ED5 /* AppleProductProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleProductProvider.swift; path = AppleProduct/AppleProductProvider.swift; sourceTree = "<group>"; };
 		B1235B4A1D669AEC00973ED5 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = AppleProduct/products.json; sourceTree = "<group>"; };
 		B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewDataSource.swift; path = Search/SearchViewDataSource.swift; sourceTree = "<group>"; };
+		B12EE8B121965B1800066282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B13402131DB362D400B9FC59 /* Transition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Transition.storyboard; path = Transition/Transition.storyboard; sourceTree = "<group>"; };
 		B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemiCoveredTransitionViewController.swift; path = Transition/SemiCoveredTransitionViewController.swift; sourceTree = "<group>"; };
 		B135177E1D67DE9700CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TextView.storyboard; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				B16BB99C1D13AA46007BA1CF /* Assets.xcassets */,
 				B16BB99E1D13AA46007BA1CF /* LaunchScreen.storyboard */,
 				B16BB9A11D13AA46007BA1CF /* Info.plist */,
+				B12EE8B121965B1800066282 /* MainViewController.swift */,
 			);
 			path = UICatalog;
 			sourceTree = "<group>";
@@ -576,16 +579,16 @@
 					B16BB9911D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 427QQ329ZX;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 					};
 					B16BB9A51D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						TestTargetID = B16BB9911D13AA46007BA1CF;
 					};
 					B16BB9B01D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						TestTargetID = B16BB9911D13AA46007BA1CF;
 					};
 				};
@@ -716,6 +719,7 @@
 				B135178F1D6EBC1100CC513D /* CodeReaderViewController.swift in Sources */,
 				B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */,
 				B11703761D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift in Sources */,
+				B12EE8B221965B1800066282 /* MainViewController.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
 				B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */,
 			);
@@ -971,8 +975,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -986,8 +989,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -999,8 +1001,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICatalog.app/UICatalog";
 			};
 			name = Debug;
@@ -1013,8 +1014,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICatalog.app/UICatalog";
 			};
 			name = Release;
@@ -1026,8 +1026,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UICatalog;
 			};
 			name = Debug;
@@ -1039,8 +1038,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UICatalog;
 			};
 			name = Release;

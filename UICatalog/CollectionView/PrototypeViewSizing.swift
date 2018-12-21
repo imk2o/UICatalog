@@ -29,7 +29,7 @@ extension PrototypeViewSizing where Self: UICollectionViewCell {
         self.layoutIfNeeded()
         
         return self.systemLayoutSizeFitting(
-            UILayoutFittingExpandedSize,
+            UIView.layoutFittingExpandedSize,
             withHorizontalFittingPriority: .required,
             verticalFittingPriority: .defaultLow
         )

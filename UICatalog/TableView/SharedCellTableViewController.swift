@@ -19,7 +19,7 @@ class SharedCellTableViewController: UIViewController {
 
         // Self sizing
         self.tableView.estimatedRowHeight = 100
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
         
         self.articles = ArticleProvider.shared.allArticles()
     }

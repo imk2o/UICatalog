@@ -40,13 +40,13 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         let regionDistance: CLLocationDistance = 1000    // meter
-        let region = MKCoordinateRegionMakeWithDistance(
-            CLLocationCoordinate2D(
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
                 latitude: 35.710007730911514,
                 longitude: 139.81069054070483
             ),
-            regionDistance,
-            regionDistance
+            latitudinalMeters: regionDistance,
+            longitudinalMeters: regionDistance
         )
         self.mapView.setRegion(region, animated: false)
     }

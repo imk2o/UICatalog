@@ -33,28 +33,28 @@ enum SimpleFilter {
         case .sepia:
             return CIFilter(
                 name: "CISepiaTone",
-                withInputParameters: [
+                parameters: [
                     kCIInputIntensityKey: intensity
                 ]
             )!
         case .blur(let size):
             return CIFilter(
                 name: "CIGaussianBlur",
-                withInputParameters: [
+                parameters: [
                     kCIInputRadiusKey: intensity * size
                 ]
             )!
         case .mosaic(let size):
             return CIFilter(
                 name: "CIPixellate",
-                withInputParameters: [
+                parameters: [
                     kCIInputScaleKey: (intensity * size) + 1.0
                 ]
             )!
         case .twist(let radius, let angle):
             return CIFilter(
                 name: "CIVortexDistortion",
-                withInputParameters: [
+                parameters: [
                     kCIInputCenterKey: CIVector(cgPoint: center),
 //                    kCIInputRadiusKey: intensity * radius,
                     kCIInputAngleKey: intensity * angle
@@ -176,7 +176,7 @@ fileprivate extension VideoCaptureViewController {
 
 fileprivate extension AVCaptureDevice {
     static func captureDevices(for position: AVCaptureDevice.Position) -> [AVCaptureDevice] {
-        return AVCaptureDevice.devices(for: .video).flatMap({ (captureDevice) -> AVCaptureDevice? in
+        return AVCaptureDevice.devices(for: .video).compactMap({ (captureDevice) -> AVCaptureDevice? in
             guard let captureDevice = captureDevice as? AVCaptureDevice else {
                 return nil
             }
@@ -187,7 +187,7 @@ fileprivate extension AVCaptureDevice {
 
 fileprivate extension AVCaptureSession {
     func installedCaptureDeviceInputs() -> [AVCaptureDeviceInput] {
-        return self.inputs.flatMap({ (input) -> AVCaptureDeviceInput? in
+        return self.inputs.compactMap({ (input) -> AVCaptureDeviceInput? in
             return input as? AVCaptureDeviceInput
         })
     }

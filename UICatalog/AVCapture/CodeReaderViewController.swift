@@ -103,7 +103,7 @@ fileprivate extension CodeReaderViewController {
 
 fileprivate extension AVCaptureDevice {
     static func captureDevices(for position: AVCaptureDevice.Position) -> [AVCaptureDevice] {
-        return AVCaptureDevice.devices(for: .video).flatMap({ (captureDevice) -> AVCaptureDevice? in
+        return AVCaptureDevice.devices(for: .video).compactMap({ (captureDevice) -> AVCaptureDevice? in
             guard let captureDevice = captureDevice as? AVCaptureDevice else {
                 return nil
             }
@@ -114,7 +114,7 @@ fileprivate extension AVCaptureDevice {
 
 fileprivate extension AVCaptureSession {
     func installedCaptureDeviceInputs() -> [AVCaptureDeviceInput] {
-        return self.inputs.flatMap({ (input) -> AVCaptureDeviceInput? in
+        return self.inputs.compactMap({ (input) -> AVCaptureDeviceInput? in
             return input as? AVCaptureDeviceInput
         })
     }
@@ -124,7 +124,7 @@ fileprivate extension AVCaptureSession {
 extension CodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
 
-        let codeObjects = metadataObjects.flatMap { (metadataObject) -> AVMetadataMachineReadableCodeObject? in
+        let codeObjects = metadataObjects.compactMap { (metadataObject) -> AVMetadataMachineReadableCodeObject? in
             return metadataObject as? AVMetadataMachineReadableCodeObject
         }
         for codeObject in codeObjects {

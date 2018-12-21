@@ -92,20 +92,20 @@ fileprivate extension TextViewScrollOrNotViewController {
 
     // キーボードの出入りを監視
     func registerKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // キーボードの監視を解除
     func unregisterKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
         guard
-            let keyboardFrameValue = (notification as NSNotification).userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue,
-            let animationDurationNumber = (notification as NSNotification).userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
+            let keyboardFrameValue = (notification as NSNotification).userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+            let animationDurationNumber = (notification as NSNotification).userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber
             else {
                 return
         }
@@ -120,7 +120,7 @@ fileprivate extension TextViewScrollOrNotViewController {
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
-        guard let animationDurationNumber = (notification as NSNotification).userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber else {
+        guard let animationDurationNumber = (notification as NSNotification).userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber else {
             return
         }
         

@@ -46,7 +46,7 @@ class UIWebViewController: UIViewController {
 }
 
 extension UIWebViewController: UIWebViewDelegate {
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
         
 //        // レスポンスをキャッシュしないリクエストに補正するハック
 //        // 本来ならサーバからCache-Control: no-cacheでレスポンスすべきだが...

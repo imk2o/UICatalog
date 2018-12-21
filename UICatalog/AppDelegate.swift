@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.setupAppearance()
         
@@ -53,7 +53,7 @@ fileprivate extension AppDelegate {
             UINavigationBar.appearance().barTintColor = barTintColor
         }
         if let titleTextColor: UIColor = UserDefaultsManager.shared.value(for: "UINavigationBar.titleTextColor") {
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: titleTextColor]
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: titleTextColor]
         }
     }
 }
