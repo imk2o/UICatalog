@@ -65,7 +65,7 @@ class CollectionViewFlowLayoutWithDecorations: UICollectionViewFlowLayout {
         var sectionIndexes: Set<Int> = []
         for layoutAttributes in layoutAttributesArray {
             let indexPath = layoutAttributes.indexPath
-            decorationLayoutAttributesArray += DecorationViewElementKind.separators.flatMap {
+            decorationLayoutAttributesArray += DecorationViewElementKind.separators.compactMap {
                 return self.layoutAttributesForDecorationView(ofKind: $0.rawValue, at: indexPath)
             }
             sectionIndexes.insert(indexPath.section)

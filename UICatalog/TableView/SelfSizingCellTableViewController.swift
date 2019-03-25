@@ -17,7 +17,7 @@ class SelfSizingCellTableViewController: UIViewController {
         super.viewDidLoad()
 
         self.tableView.estimatedRowHeight = 120
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
 
         self.articles = ArticleProvider.shared.allArticles()
     }

@@ -49,7 +49,7 @@ fileprivate extension SwitchChildrenViewController {
     }
     
     var currentChildViewController: UIViewController? {
-        return self.childViewControllers.first
+        return self.children.first
     }
     
     func setCurrentChild(
@@ -67,12 +67,12 @@ fileprivate extension SwitchChildrenViewController {
         // ・childVC.view.removeFromSuperview()
         // ・childVC.removeFromParentViewController()
         if let oldChildViewController = self.currentChildViewController {
-            oldChildViewController.willMove(toParentViewController: self)
-            self.addChildViewController(newChildViewController)
+            oldChildViewController.willMove(toParent: self)
+            self.addChild(newChildViewController)
             
             let (duration, options) = animated ?
-                (0.25, UIViewAnimationOptions.transitionCrossDissolve) :
-                (0.0, UIViewAnimationOptions())
+                (0.25, UIView.AnimationOptions.transitionCrossDissolve) :
+                (0.0, UIView.AnimationOptions())
             
             self.transition(
                 from: oldChildViewController,
@@ -82,15 +82,15 @@ fileprivate extension SwitchChildrenViewController {
                 animations: nil,
                 completion: { (finished) in
                     oldChildViewController.view.removeFromSuperview()
-                    oldChildViewController.removeFromParentViewController()
-                    newChildViewController.didMove(toParentViewController: self)
+                    oldChildViewController.removeFromParent()
+                    newChildViewController.didMove(toParent: self)
                     completion?()
                 }
             )
         } else {
-            self.addChildViewController(newChildViewController)
+            self.addChild(newChildViewController)
             self.view.addSubview(newChildViewController.view)
-            newChildViewController.didMove(toParentViewController: self)
+            newChildViewController.didMove(toParent: self)
             completion?()
         }
     }

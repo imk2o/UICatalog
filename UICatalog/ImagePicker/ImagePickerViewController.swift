@@ -95,7 +95,7 @@ fileprivate extension ImagePickerViewController {
         }
     }
     
-    func pickImage(from sourceType: UIImagePickerControllerSourceType) {
+    func pickImage(from sourceType: UIImagePickerController.SourceType) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = sourceType
@@ -108,8 +108,11 @@ fileprivate extension ImagePickerViewController {
 
 // MARK: - UIImagePickerControllerDelegate
 extension ImagePickerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        if let image = info[convertFromUIImagePickerControllerInfoKey(.originalImage)] as? UIImage {
             //if let image = info[UIImagePickerControllerEditedImage] as? UIImage {    // cropped image
             self.imageView.image = image
         }
@@ -121,4 +124,14 @@ extension ImagePickerViewController: UIImagePickerControllerDelegate, UINavigati
         // cancelled
         picker.dismiss(animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

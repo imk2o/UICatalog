@@ -77,7 +77,7 @@ class RoundedRectLabel: UILabel {
     }
     
     override func drawText(in rect: CGRect) {
-        let extendedRect = UIEdgeInsetsInsetRect(rect, self.contentEdgeInsets)
+        let extendedRect = rect.inset(by: self.contentEdgeInsets)
         super.drawText(in: extendedRect)
     }
     

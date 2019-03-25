@@ -30,6 +30,7 @@
 		B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B481D66999E00973ED5 /* AppleProductProvider.swift */; };
 		B1235B4B1D669AEC00973ED5 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B1235B4A1D669AEC00973ED5 /* products.json */; };
 		B1235B4D1D669BEB00973ED5 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */; };
+		B12EE8B221965B1800066282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EE8B121965B1800066282 /* MainViewController.swift */; };
 		B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13402131DB362D400B9FC59 /* Transition.storyboard */; };
 		B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */; };
 		B135177F1D67DE9700CC513D /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B135177D1D67DE9700CC513D /* TextView.storyboard */; };
@@ -67,6 +68,8 @@
 		B1AE828C1E0CC7420077385A /* DesignedComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */; };
 		B1AE828E1E0CC75F0077385A /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */; };
 		B1AE82901E0CD0AE0077385A /* RoundedRectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */; };
+		B1B19D0D20789DA100F67BD6 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B19D0B20789DA100F67BD6 /* MapView.storyboard */; };
+		B1B19D0F20789F3B00F67BD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */; };
 		B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */; };
 		B1B48AC11DA6360B00459B81 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */; };
 		B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */; };
@@ -129,6 +132,7 @@
 		B1235B481D66999E00973ED5 /* AppleProductProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleProductProvider.swift; path = AppleProduct/AppleProductProvider.swift; sourceTree = "<group>"; };
 		B1235B4A1D669AEC00973ED5 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = AppleProduct/products.json; sourceTree = "<group>"; };
 		B1235B4C1D669BEB00973ED5 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewDataSource.swift; path = Search/SearchViewDataSource.swift; sourceTree = "<group>"; };
+		B12EE8B121965B1800066282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B13402131DB362D400B9FC59 /* Transition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Transition.storyboard; path = Transition/Transition.storyboard; sourceTree = "<group>"; };
 		B13402151DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemiCoveredTransitionViewController.swift; path = Transition/SemiCoveredTransitionViewController.swift; sourceTree = "<group>"; };
 		B135177E1D67DE9700CC513D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TextView.storyboard; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 		B1AE828B1E0CC7420077385A /* DesignedComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignedComponentsViewController.swift; path = DesignedComponents/DesignedComponentsViewController.swift; sourceTree = "<group>"; };
 		B1AE828D1E0CC75F0077385A /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectButton.swift; path = DesignedComponents/RoundedRectButton.swift; sourceTree = "<group>"; };
 		B1AE828F1E0CD0AE0077385A /* RoundedRectLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedRectLabel.swift; path = CustomView/RoundedRectLabel.swift; sourceTree = "<group>"; };
+		B1B19D0C20789DA100F67BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MapView.storyboard; sourceTree = "<group>"; };
+		B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MapView/MapViewController.swift; sourceTree = "<group>"; };
 		B1B48ABE1DA09DA300459B81 /* ReadMoreTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreTextViewController.swift; path = TextView/ReadMoreTextViewController.swift; sourceTree = "<group>"; };
 		B1B48AC01DA6360B00459B81 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewController.swift; path = CollectionView/HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		B1B48AC21DA636E300459B81 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalCollectionViewCell.swift; path = CollectionView/HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +224,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1140F5420789D4900CD4597 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				B1B19D0B20789DA100F67BD6 /* MapView.storyboard */,
+				B1B19D0E20789F3B00F67BD6 /* MapViewController.swift */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
 		B1235B1C1D6541A000973ED5 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +384,7 @@
 		B16BB9941D13AA46007BA1CF /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
+				B1140F5420789D4900CD4597 /* MapView */,
 				B19BF3E21EED2D2A00713843 /* Popover */,
 				B1AE82881E0CC69F0077385A /* CustomView */,
 				B1235B451D66996E00973ED5 /* AppleProduct */,
@@ -394,6 +410,7 @@
 				B16BB99C1D13AA46007BA1CF /* Assets.xcassets */,
 				B16BB99E1D13AA46007BA1CF /* LaunchScreen.storyboard */,
 				B16BB9A11D13AA46007BA1CF /* Info.plist */,
+				B12EE8B121965B1800066282 /* MainViewController.swift */,
 			);
 			path = UICatalog;
 			sourceTree = "<group>";
@@ -562,16 +579,16 @@
 					B16BB9911D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 427QQ329ZX;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 					};
 					B16BB9A51D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						TestTargetID = B16BB9911D13AA46007BA1CF;
 					};
 					B16BB9B01D13AA46007BA1CF = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						TestTargetID = B16BB9911D13AA46007BA1CF;
 					};
 				};
@@ -623,6 +640,7 @@
 				B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
 				B13517AD1D7BE5B300CC513D /* Appearance.storyboard in Resources */,
+				B1B19D0D20789DA100F67BD6 /* MapView.storyboard in Resources */,
 				B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */,
 				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
@@ -659,6 +677,7 @@
 				B1F77ED51DFAD3F80089DB9F /* UIView+Extension.swift in Sources */,
 				B1235B441D66992A00973ED5 /* SearchViewController.swift in Sources */,
 				B1F77ED11DF637050089DB9F /* SharedTableViewCell.swift in Sources */,
+				B1B19D0F20789F3B00F67BD6 /* MapViewController.swift in Sources */,
 				B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */,
 				B1F4DC2D1DDF258300CDCCFF /* UIImageView+URL.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
@@ -700,6 +719,7 @@
 				B135178F1D6EBC1100CC513D /* CodeReaderViewController.swift in Sources */,
 				B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */,
 				B11703761D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift in Sources */,
+				B12EE8B221965B1800066282 /* MainViewController.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,
 				B1235B391D6689DE00973ED5 /* SwitchChildrenViewController.swift in Sources */,
 			);
@@ -849,6 +869,14 @@
 			name = ScrollView.storyboard;
 			sourceTree = "<group>";
 		};
+		B1B19D0B20789DA100F67BD6 /* MapView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1B19D0C20789DA100F67BD6 /* Base */,
+			);
+			name = MapView.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -947,8 +975,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -962,8 +989,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -975,8 +1001,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICatalog.app/UICatalog";
 			};
 			name = Debug;
@@ -989,8 +1014,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICatalog.app/UICatalog";
 			};
 			name = Release;
@@ -1002,8 +1026,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UICatalog;
 			};
 			name = Debug;
@@ -1015,8 +1038,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UICatalogUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UICatalog;
 			};
 			name = Release;

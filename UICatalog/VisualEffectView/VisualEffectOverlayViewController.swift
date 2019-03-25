@@ -40,7 +40,7 @@ class VisualEffectOverlayViewController: UIViewController {
     }
     
     @IBAction func editStyle(_ sender: UIButton) {
-        let items: [(String, UIBlurEffectStyle?)] = [
+        let items: [(String, UIBlurEffect.Style?)] = [
             ("ExtraLight", .extraLight),
             ("Light", .light),
             ("Dark", .dark),
@@ -57,7 +57,7 @@ class VisualEffectOverlayViewController: UIViewController {
         }
     }
 
-    fileprivate func setBlurEffectStyle(_ style: UIBlurEffectStyle?, animated: Bool, completion handler: (() -> Void)? = nil) {
+    fileprivate func setBlurEffectStyle(_ style: UIBlurEffect.Style?, animated: Bool, completion handler: (() -> Void)? = nil) {
         if animated {
             UIView.animate(
                 withDuration: 0.5,
