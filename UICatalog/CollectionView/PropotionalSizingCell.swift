@@ -18,10 +18,6 @@ class PropotionalSizingCell: UICollectionViewCell, PrototypeViewSizing {
         // Initialization code
     }
 
-    static var nib: UINib {
-        return UINib(nibName: String(describing: self), bundle: nil)
-    }
-    
     override func prepareForReuse() {
         self.imageView.image = nil
     }
