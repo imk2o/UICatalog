@@ -108,7 +108,7 @@ extension MapViewController: MKMapViewDelegate {
         let identifier = "Station"
         let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) ?? MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         annotationView.annotation = annotation
-        annotationView.image = UIImage(named: "Control")		// FIXME
+        annotationView.image = UIImage(named: "annotation")
         
 //        // アノテーションをタップしたら「吹き出し」を表示
 //        // annotationのtitleとsubtitle、rightCalloutAccessoryViewが表示される
