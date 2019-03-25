@@ -56,6 +56,16 @@
 		B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9D01D13AFA4007BA1CF /* ArticleProvider.swift */; };
 		B16BB9D31D13B6AB007BA1CF /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */; };
 		B174419F1FA84621001CF882 /* SectionBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B174419E1FA84621001CF882 /* SectionBackgroundView.xib */; };
+		B17D4D872248743A00A88F1E /* CollectionInTheCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D862248743A00A88F1E /* CollectionInTheCellTableViewController.swift */; };
+		B17D4D912248750200A88F1E /* IntrinsicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D882248750000A88F1E /* IntrinsicCollectionView.swift */; };
+		B17D4D922248750200A88F1E /* OuterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17D4D892248750100A88F1E /* OuterTableViewCell.xib */; };
+		B17D4D932248750200A88F1E /* IntrinsicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8A2248750100A88F1E /* IntrinsicTableView.swift */; };
+		B17D4D942248750200A88F1E /* InnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8B2248750100A88F1E /* InnerTableViewCell.swift */; };
+		B17D4D952248750200A88F1E /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8C2248750100A88F1E /* CustomFlowLayout.swift */; };
+		B17D4D962248750200A88F1E /* InnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8D2248750100A88F1E /* InnerCollectionViewCell.swift */; };
+		B17D4D972248750200A88F1E /* OuterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8E2248750200A88F1E /* OuterTableViewCell.swift */; };
+		B17D4D982248750200A88F1E /* InnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17D4D8F2248750200A88F1E /* InnerTableViewCell.xib */; };
+		B17D4D992248750200A88F1E /* InnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17D4D902248750200A88F1E /* InnerCollectionViewCell.xib */; };
 		B19BF3E51EED2DAD00713843 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19BF3E41EED2DAD00713843 /* Popover.storyboard */; };
 		B19BF3E71EED2DFC00713843 /* PopoverParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BF3E61EED2DFC00713843 /* PopoverParentViewController.swift */; };
 		B19BF3E91EED2F7900713843 /* PopoverContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BF3E81EED2F7900713843 /* PopoverContentViewController.swift */; };
@@ -164,6 +174,16 @@
 		B16BB9D01D13AFA4007BA1CF /* ArticleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleProvider.swift; path = Article/ArticleProvider.swift; sourceTree = "<group>"; };
 		B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = TableView/ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		B174419E1FA84621001CF882 /* SectionBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SectionBackgroundView.xib; path = CollectionView/SectionBackgroundView.xib; sourceTree = "<group>"; };
+		B17D4D862248743A00A88F1E /* CollectionInTheCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionInTheCellTableViewController.swift; path = TableView/CollectionInTheCellTableViewController.swift; sourceTree = "<group>"; };
+		B17D4D882248750000A88F1E /* IntrinsicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicCollectionView.swift; path = TableView/IntrinsicCollectionView.swift; sourceTree = "<group>"; };
+		B17D4D892248750100A88F1E /* OuterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OuterTableViewCell.xib; path = TableView/OuterTableViewCell.xib; sourceTree = "<group>"; };
+		B17D4D8A2248750100A88F1E /* IntrinsicTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicTableView.swift; path = TableView/IntrinsicTableView.swift; sourceTree = "<group>"; };
+		B17D4D8B2248750100A88F1E /* InnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerTableViewCell.swift; path = TableView/InnerTableViewCell.swift; sourceTree = "<group>"; };
+		B17D4D8C2248750100A88F1E /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFlowLayout.swift; path = TableView/CustomFlowLayout.swift; sourceTree = "<group>"; };
+		B17D4D8D2248750100A88F1E /* InnerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerCollectionViewCell.swift; path = TableView/InnerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B17D4D8E2248750200A88F1E /* OuterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OuterTableViewCell.swift; path = TableView/OuterTableViewCell.swift; sourceTree = "<group>"; };
+		B17D4D8F2248750200A88F1E /* InnerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InnerTableViewCell.xib; path = TableView/InnerTableViewCell.xib; sourceTree = "<group>"; };
+		B17D4D902248750200A88F1E /* InnerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InnerCollectionViewCell.xib; path = TableView/InnerCollectionViewCell.xib; sourceTree = "<group>"; };
 		B19BF3E41EED2DAD00713843 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = Popover/Popover.storyboard; sourceTree = "<group>"; };
 		B19BF3E61EED2DFC00713843 /* PopoverParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverParentViewController.swift; path = Popover/PopoverParentViewController.swift; sourceTree = "<group>"; };
 		B19BF3E81EED2F7900713843 /* PopoverContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverContentViewController.swift; path = Popover/PopoverContentViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +456,15 @@
 		B16BB9C61D13AB97007BA1CF /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				B17D4D8C2248750100A88F1E /* CustomFlowLayout.swift */,
+				B17D4D8D2248750100A88F1E /* InnerCollectionViewCell.swift */,
+				B17D4D902248750200A88F1E /* InnerCollectionViewCell.xib */,
+				B17D4D8B2248750100A88F1E /* InnerTableViewCell.swift */,
+				B17D4D8F2248750200A88F1E /* InnerTableViewCell.xib */,
+				B17D4D882248750000A88F1E /* IntrinsicCollectionView.swift */,
+				B17D4D8A2248750100A88F1E /* IntrinsicTableView.swift */,
+				B17D4D8E2248750200A88F1E /* OuterTableViewCell.swift */,
+				B17D4D892248750100A88F1E /* OuterTableViewCell.xib */,
 				B16BB9C31D13AB91007BA1CF /* TableView.storyboard */,
 				B16BB9C71D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift */,
 				B16BB9D21D13B6AB007BA1CF /* ArticleTableViewCell.swift */,
@@ -445,6 +474,7 @@
 				B1F77ECE1DF635CA0089DB9F /* SharedCell.xib */,
 				B1F77ED01DF637050089DB9F /* SharedTableViewCell.swift */,
 				B1F77ED21DF637170089DB9F /* SharedCollectionViewCell.swift */,
+				B17D4D862248743A00A88F1E /* CollectionInTheCellTableViewController.swift */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -629,6 +659,7 @@
 				B11EDC931FA82EC2007D24F8 /* SeparatorDecorationView.xib in Resources */,
 				B1235B271D6548B400973ED5 /* PageView.storyboard in Resources */,
 				B13402141DB362D400B9FC59 /* Transition.storyboard in Resources */,
+				B17D4D922248750200A88F1E /* OuterTableViewCell.xib in Resources */,
 				B16BB9C51D13AB91007BA1CF /* TableView.storyboard in Resources */,
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B1F4DC271DDE76D200CDCCFF /* PropotionalSizingCell.xib in Resources */,
@@ -636,6 +667,7 @@
 				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
 				B174419F1FA84621001CF882 /* SectionBackgroundView.xib in Resources */,
 				B1AE82851E0CBB320077385A /* ScrollView.storyboard in Resources */,
+				B17D4D992248750200A88F1E /* InnerCollectionViewCell.xib in Resources */,
 				B16BB99B1D13AA46007BA1CF /* Main.storyboard in Resources */,
 				B1F77ECF1DF635CA0089DB9F /* SharedCell.xib in Resources */,
 				B1235B4B1D669AEC00973ED5 /* products.json in Resources */,
@@ -643,6 +675,7 @@
 				B1B19D0D20789DA100F67BD6 /* MapView.storyboard in Resources */,
 				B135178B1D6EB75300CC513D /* AVCapture.storyboard in Resources */,
 				B1235B371D66897C00973ED5 /* ChildView.storyboard in Resources */,
+				B17D4D982248750200A88F1E /* InnerTableViewCell.xib in Resources */,
 				B1235B311D6686B100973ED5 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,6 +712,7 @@
 				B1F77ED11DF637050089DB9F /* SharedTableViewCell.swift in Sources */,
 				B1B19D0F20789F3B00F67BD6 /* MapViewController.swift in Sources */,
 				B13402161DB3686D00B9FC59 /* SemiCoveredTransitionViewController.swift in Sources */,
+				B17D4D962248750200A88F1E /* InnerCollectionViewCell.swift in Sources */,
 				B1F4DC2D1DDF258300CDCCFF /* UIImageView+URL.swift in Sources */,
 				B1235B211D65423600973ED5 /* GridCollectionViewController.swift in Sources */,
 				B1235B3E1D668F6E00973ED5 /* UIWebViewController.swift in Sources */,
@@ -686,11 +720,14 @@
 				B13517871D6EB28800CC513D /* ImagePickerViewController.swift in Sources */,
 				B1AA13231D87C01700D7D0A5 /* FloatingHeaderFlowLayout.swift in Sources */,
 				B16BB9C81D13ABF9007BA1CF /* SelfSizingCellTableViewController.swift in Sources */,
+				B17D4D942248750200A88F1E /* InnerTableViewCell.swift in Sources */,
+				B17D4D912248750200A88F1E /* IntrinsicCollectionView.swift in Sources */,
 				B1F77EC91DF635870089DB9F /* SharedCellTableViewController.swift in Sources */,
 				B1AE828C1E0CC7420077385A /* DesignedComponentsViewController.swift in Sources */,
 				B1B4CBD31DB6F2EB000F0094 /* TransitionCoverViewController.swift in Sources */,
 				B13517811D67DF8A00CC513D /* TextViewScrollOrNotViewController.swift in Sources */,
 				B16BB9D11D13AFA4007BA1CF /* ArticleProvider.swift in Sources */,
+				B17D4D952248750200A88F1E /* CustomFlowLayout.swift in Sources */,
 				B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */,
 				B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */,
 				B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */,
@@ -708,16 +745,19 @@
 				B1B48AC31DA636E300459B81 /* HorizontalCollectionViewCell.swift in Sources */,
 				B1F77ED31DF637170089DB9F /* SharedCollectionViewCell.swift in Sources */,
 				B1F77ECD1DF635B40089DB9F /* SharedCell.swift in Sources */,
+				B17D4D872248743A00A88F1E /* CollectionInTheCellTableViewController.swift in Sources */,
 				B1F4DC231DDE76AD00CDCCFF /* PropotionalSizingCollectionViewController.swift in Sources */,
 				B1F4DC291DDE777000CDCCFF /* PrototypeViewSizing.swift in Sources */,
 				B1B48ABF1DA09DA300459B81 /* ReadMoreTextViewController.swift in Sources */,
 				B1AA13211D86788F00D7D0A5 /* VisualEffectOverlayViewController.swift in Sources */,
 				B19BF3E71EED2DFC00713843 /* PopoverParentViewController.swift in Sources */,
 				B11EDC911FA82DEA007D24F8 /* CollectionViewFlowLayoutWithDecorations.swift in Sources */,
+				B17D4D932248750200A88F1E /* IntrinsicTableView.swift in Sources */,
 				B1235B291D65495300973ED5 /* ScrollPagingViewController.swift in Sources */,
 				B11703721D7D370B0016792B /* NavigationBarAppearanceViewController.swift in Sources */,
 				B135178F1D6EBC1100CC513D /* CodeReaderViewController.swift in Sources */,
 				B1235B491D66999E00973ED5 /* AppleProductProvider.swift in Sources */,
+				B17D4D972248750200A88F1E /* OuterTableViewCell.swift in Sources */,
 				B11703761D7D3BCF0016792B /* UIViewController+ActionSheetItemPicker.swift in Sources */,
 				B12EE8B221965B1800066282 /* MainViewController.swift in Sources */,
 				B1235B331D6686DC00973ED5 /* AlertAndActionSheetViewController.swift in Sources */,

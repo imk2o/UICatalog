@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIView {
+    /// クラス名と同じnibを得る。
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+    }
+
     func addSubviewAndFitConstraints(_ subview: UIView) {
         self.addSubview(subview)
         
@@ -43,3 +48,22 @@ extension UIView {
         ))
     }
 }
+
+protocol NibInstantiatable {}
+extension UIView: NibInstantiatable {}
+
+extension NibInstantiatable where Self: UIView {
+    
+    /// nibからインスタンスを生成する。
+    ///
+    /// - Parameter ownerOrNil: オーナー
+    /// - Returns: インスタンスを返す
+    static func instantiateFromNib(withOwner ownerOrNil: Any? = nil) -> Self {
+        guard let object = Self.nib.instantiate(withOwner: ownerOrNil, options: nil).first as? Self else {
+            fatalError()
+        }
+        
+        return object
+    }
+}
+
