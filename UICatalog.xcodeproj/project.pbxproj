@@ -66,6 +66,8 @@
 		B17D4D972248750200A88F1E /* OuterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D4D8E2248750200A88F1E /* OuterTableViewCell.swift */; };
 		B17D4D982248750200A88F1E /* InnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17D4D8F2248750200A88F1E /* InnerTableViewCell.xib */; };
 		B17D4D992248750200A88F1E /* InnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17D4D902248750200A88F1E /* InnerCollectionViewCell.xib */; };
+		B18B908C229E1DA100E3CC74 /* TextTruncation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18B908B229E1DA100E3CC74 /* TextTruncation.storyboard */; };
+		B18B908E229E1E8500E3CC74 /* TextTruncationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B908D229E1E8500E3CC74 /* TextTruncationViewController.swift */; };
 		B19BF3E51EED2DAD00713843 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19BF3E41EED2DAD00713843 /* Popover.storyboard */; };
 		B19BF3E71EED2DFC00713843 /* PopoverParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BF3E61EED2DFC00713843 /* PopoverParentViewController.swift */; };
 		B19BF3E91EED2F7900713843 /* PopoverContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19BF3E81EED2F7900713843 /* PopoverContentViewController.swift */; };
@@ -184,6 +186,8 @@
 		B17D4D8E2248750200A88F1E /* OuterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OuterTableViewCell.swift; path = TableView/OuterTableViewCell.swift; sourceTree = "<group>"; };
 		B17D4D8F2248750200A88F1E /* InnerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InnerTableViewCell.xib; path = TableView/InnerTableViewCell.xib; sourceTree = "<group>"; };
 		B17D4D902248750200A88F1E /* InnerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InnerCollectionViewCell.xib; path = TableView/InnerCollectionViewCell.xib; sourceTree = "<group>"; };
+		B18B908B229E1DA100E3CC74 /* TextTruncation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = TextTruncation.storyboard; path = TextTruncation/TextTruncation.storyboard; sourceTree = "<group>"; };
+		B18B908D229E1E8500E3CC74 /* TextTruncationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextTruncationViewController.swift; path = TextTruncation/TextTruncationViewController.swift; sourceTree = "<group>"; };
 		B19BF3E41EED2DAD00713843 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = Popover/Popover.storyboard; sourceTree = "<group>"; };
 		B19BF3E61EED2DFC00713843 /* PopoverParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverParentViewController.swift; path = Popover/PopoverParentViewController.swift; sourceTree = "<group>"; };
 		B19BF3E81EED2F7900713843 /* PopoverContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverContentViewController.swift; path = Popover/PopoverContentViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 				B13517AA1D7BE59200CC513D /* Appearance */,
 				B1AA131C1D86775E00D7D0A5 /* VisualEffectView */,
 				B13402121DB362AD00B9FC59 /* Transision */,
+				B18B908A229E1D8200E3CC74 /* TextTruncation */,
 				B1FFECB11D7BEBFE00522F51 /* Misc */,
 				B16BB9951D13AA46007BA1CF /* AppDelegate.swift */,
 				B16BB9971D13AA46007BA1CF /* MenuViewController.swift */,
@@ -487,6 +492,15 @@
 				B16BB9D01D13AFA4007BA1CF /* ArticleProvider.swift */,
 			);
 			name = Article;
+			sourceTree = "<group>";
+		};
+		B18B908A229E1D8200E3CC74 /* TextTruncation */ = {
+			isa = PBXGroup;
+			children = (
+				B18B908B229E1DA100E3CC74 /* TextTruncation.storyboard */,
+				B18B908D229E1E8500E3CC74 /* TextTruncationViewController.swift */,
+			);
+			name = TextTruncation;
 			sourceTree = "<group>";
 		};
 		B19BF3E21EED2D2A00713843 /* Popover */ = {
@@ -664,6 +678,7 @@
 				B1235B1F1D6541DE00973ED5 /* CollectionView.storyboard in Resources */,
 				B1F4DC271DDE76D200CDCCFF /* PropotionalSizingCell.xib in Resources */,
 				B16BB9CD1D13AEDF007BA1CF /* articles.json in Resources */,
+				B18B908C229E1DA100E3CC74 /* TextTruncation.storyboard in Resources */,
 				B1235B421D66989500973ED5 /* Search.storyboard in Resources */,
 				B174419F1FA84621001CF882 /* SectionBackgroundView.xib in Resources */,
 				B1AE82851E0CBB320077385A /* ScrollView.storyboard in Resources */,
@@ -731,6 +746,7 @@
 				B1235B2B1D654AF000973ED5 /* ScrollPagingViewDataSource.swift in Sources */,
 				B1235B2D1D654B5C00973ED5 /* PageContentViewController.swift in Sources */,
 				B1235B231D65460D00973ED5 /* GridCollectionViewCell.swift in Sources */,
+				B18B908E229E1E8500E3CC74 /* TextTruncationViewController.swift in Sources */,
 				B1FFECB31D7BEC1700522F51 /* UserDefaultsManager.swift in Sources */,
 				B16BB9981D13AA46007BA1CF /* MenuViewController.swift in Sources */,
 				B135178D1D6EB76700CC513D /* VideoCaptureViewController.swift in Sources */,
