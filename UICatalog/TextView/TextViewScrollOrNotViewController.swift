@@ -72,7 +72,7 @@ fileprivate extension TextViewScrollOrNotViewController {
             return
         }
         
-        let matches = regex.matches(in: text, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: text.characters.count))
+        let matches = regex.matches(in: text, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: text.count))
         for match in matches {
             print(match.range)
             let keywordRange = NSRange(
