@@ -11,6 +11,9 @@
 		B1541FD524A0575200B9E4C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1541FD324A0575200B9E4C6 /* Main.storyboard */; };
 		B1541FD724A0575500B9E4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1541FD624A0575500B9E4C6 /* Assets.xcassets */; };
 		B1541FDA24A0575500B9E4C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1541FD824A0575500B9E4C6 /* LaunchScreen.storyboard */; };
+		B1934C3724A1C99000A3FAE2 /* SearchMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3624A1C99000A3FAE2 /* SearchMenuViewController.swift */; };
+		B1934C3924A1C9B900A3FAE2 /* ModalSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3824A1C9B900A3FAE2 /* ModalSearchController.swift */; };
+		B1934C3B24A1D15900A3FAE2 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3A24A1D15900A3FAE2 /* SearchResultsViewController.swift */; };
 		B1D93F2524A058E700B9A16B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D93EC424A058E400B9A16B /* SearchViewController.swift */; };
 		B1D93F2624A058E700B9A16B /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D93EC524A058E400B9A16B /* SearchViewDataSource.swift */; };
 		B1D93F2724A058E700B9A16B /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D93EC724A058E400B9A16B /* Popover.storyboard */; };
@@ -109,6 +112,9 @@
 		B1541FD624A0575500B9E4C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1541FD924A0575500B9E4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1541FDB24A0575500B9E4C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1934C3624A1C99000A3FAE2 /* SearchMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuViewController.swift; sourceTree = "<group>"; };
+		B1934C3824A1C9B900A3FAE2 /* ModalSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSearchController.swift; sourceTree = "<group>"; };
+		B1934C3A24A1D15900A3FAE2 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		B1D93EC424A058E400B9A16B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B1D93EC524A058E400B9A16B /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
 		B1D93EC724A058E400B9A16B /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
@@ -269,7 +275,10 @@
 			children = (
 				B1D93EC424A058E400B9A16B /* SearchViewController.swift */,
 				B1D93EC524A058E400B9A16B /* SearchViewDataSource.swift */,
+				B1934C3624A1C99000A3FAE2 /* SearchMenuViewController.swift */,
 				B1D93F8524A0594D00B9A16B /* Search.storyboard */,
+				B1934C3824A1C9B900A3FAE2 /* ModalSearchController.swift */,
+				B1934C3A24A1D15900A3FAE2 /* SearchResultsViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -617,6 +626,7 @@
 				B1D93F4824A058E700B9A16B /* IntrinsicTableView.swift in Sources */,
 				B1D93F3E24A058E700B9A16B /* SharedCellCollectionViewController.swift in Sources */,
 				B1D93F4024A058E700B9A16B /* SharedCellTableViewController.swift in Sources */,
+				B1934C3B24A1D15900A3FAE2 /* SearchResultsViewController.swift in Sources */,
 				B1D93F4124A058E700B9A16B /* CollectionInTheCellTableViewController.swift in Sources */,
 				B1D93F6A24A058E700B9A16B /* Article.swift in Sources */,
 				B1D93F5D24A058E700B9A16B /* GridCollectionViewController.swift in Sources */,
@@ -632,6 +642,7 @@
 				B1D93F7024A058E700B9A16B /* BasicScrollViewController.swift in Sources */,
 				B1D93F3F24A058E700B9A16B /* ArticleTableViewCell.swift in Sources */,
 				B1D93F5824A058E700B9A16B /* PrototypeViewSizing.swift in Sources */,
+				B1934C3924A1C9B900A3FAE2 /* ModalSearchController.swift in Sources */,
 				B1D93F6524A058E700B9A16B /* TextViewScrollOrNotViewController.swift in Sources */,
 				B1D93F5024A058E700B9A16B /* UserDefaultsManager.swift in Sources */,
 				B1D93F3224A058E700B9A16B /* NavigationBarAppearanceViewController.swift in Sources */,
@@ -647,6 +658,7 @@
 				B1D93F6824A058E700B9A16B /* AlertAndActionSheetViewController.swift in Sources */,
 				B1D93F5624A058E700B9A16B /* FloatingHeaderFlowLayout.swift in Sources */,
 				B1D93F5224A058E700B9A16B /* UIViewController+ActionSheetItemPicker.swift in Sources */,
+				B1934C3724A1C99000A3FAE2 /* SearchMenuViewController.swift in Sources */,
 				B1D93F6624A058E700B9A16B /* ReadMoreTextViewController.swift in Sources */,
 				B1D93F4324A058E700B9A16B /* SharedCollectionViewCell.swift in Sources */,
 				B1D93F5B24A058E700B9A16B /* PropotionalSizingCell.swift in Sources */,
