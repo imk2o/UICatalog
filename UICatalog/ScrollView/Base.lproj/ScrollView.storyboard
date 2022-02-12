@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,10 +13,6 @@
         <scene sceneID="I1E-45-1cU">
             <objects>
                 <viewController storyboardIdentifier="BasicScrollView" hidesBottomBarWhenPushed="YES" id="M22-3G-JvM" customClass="BasicScrollViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="due-TU-fVh"/>
-                        <viewControllerLayoutGuide type="bottom" id="YB9-MZ-UHw"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W6g-Qr-x1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,34 +21,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7IZ-xC-Mq8">
-                                        <rect key="frame" x="12" y="24" width="351" height="630"/>
+                                        <rect key="frame" x="12" y="24" width="351" height="611.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-Qa-lNY">
-                                                <rect key="frame" x="0.0" y="0.0" width="351" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="17"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8S-Bo-CH0">
-                                                <rect key="frame" x="0.0" y="32.5" width="351" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="29" width="351" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtz-me-843">
-                                                <rect key="frame" x="0.0" y="74.5" width="351" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="75" width="351" height="17"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dH-Qg-m8F">
-                                                <rect key="frame" x="0.0" y="107" width="351" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="104" width="351" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Vo-2s-L2w">
-                                                <rect key="frame" x="0.0" y="149" width="351" height="200"/>
+                                                <rect key="frame" x="0.0" y="150" width="351" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="Fro-eY-VRx"/>
@@ -61,7 +56,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-RH-YCR">
-                                                <rect key="frame" x="0.0" y="361" width="351" height="31"/>
+                                                <rect key="frame" x="0.0" y="362" width="351" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約に同意する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJH-yT-upO">
                                                         <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
@@ -74,19 +69,19 @@
                                                     </switch>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-Zh-nQk">
-                                                <rect key="frame" x="0.0" y="404" width="351" height="36"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-Zh-nQk">
+                                                <rect key="frame" x="0.0" y="405" width="351" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="会員登録"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz8-f1-rHn">
-                                                <rect key="frame" x="0.0" y="452" width="351" height="178"/>
-                                                <mutableString key="text">Scroll ViewのAuto Layoutをうまく設定するコツは、以下を行うことです。
+                                                <rect key="frame" x="0.0" y="453" width="351" height="158.5"/>
+                                                <string key="text">Scroll ViewのAuto Layoutをうまく設定するコツは、以下を行うことです。
 ・Content Viewの四辺にConstraintを設定する
 (このときBottom SpaceのPriorityは250に設定し、Constantの値は下部に確保したいマージンの値にする)
 ・Scroll Viewと配下のContent Viewの間にConstraint "Equal Width"を設定する
 (Leading Space, Trailing Spaceを取っている場合はその分をConstant値でマイナスする)
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -103,12 +98,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="kWE-7n-gF6"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Yoz-Lc-GVH" secondAttribute="trailing" id="1Aw-zb-eZp"/>
-                            <constraint firstItem="Yoz-Lc-GVH" firstAttribute="leading" secondItem="W6g-Qr-x1w" secondAttribute="leading" id="B3A-Hc-5cU"/>
+                            <constraint firstItem="kWE-7n-gF6" firstAttribute="trailing" secondItem="Yoz-Lc-GVH" secondAttribute="trailing" id="1Aw-zb-eZp"/>
+                            <constraint firstItem="Yoz-Lc-GVH" firstAttribute="leading" secondItem="kWE-7n-gF6" secondAttribute="leading" id="B3A-Hc-5cU"/>
                             <constraint firstItem="Yoz-Lc-GVH" firstAttribute="top" secondItem="W6g-Qr-x1w" secondAttribute="top" id="Ulf-bg-xqE"/>
-                            <constraint firstItem="YB9-MZ-UHw" firstAttribute="top" secondItem="Yoz-Lc-GVH" secondAttribute="bottom" id="tRk-ah-FsB"/>
+                            <constraint firstItem="kWE-7n-gF6" firstAttribute="bottom" secondItem="Yoz-Lc-GVH" secondAttribute="bottom" id="tRk-ah-FsB"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -120,5 +116,66 @@
             </objects>
             <point key="canvasLocation" x="245.59999999999999" y="181.25937031484258"/>
         </scene>
+        <!--Image-->
+        <scene sceneID="dzW-Fa-SgH">
+            <objects>
+                <viewController storyboardIdentifier="ImageScrollView" hidesBottomBarWhenPushed="YES" id="Rw4-a5-ZRI" customClass="ImageScrollViewController" customModule="UICatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bwl-i6-mKk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="dET-Km-j9n">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jellyfish_large" translatesAutoresizingMaskIntoConstraints="NO" id="0GQ-lG-zBk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0GQ-lG-zBk" firstAttribute="width" secondItem="dET-Km-j9n" secondAttribute="width" id="0rI-sZ-Eg7"/>
+                                    <constraint firstAttribute="trailing" secondItem="0GQ-lG-zBk" secondAttribute="trailing" id="6kB-3z-7J3"/>
+                                    <constraint firstItem="0GQ-lG-zBk" firstAttribute="top" secondItem="dET-Km-j9n" secondAttribute="top" id="Eye-t1-YVx"/>
+                                    <constraint firstAttribute="bottom" secondItem="0GQ-lG-zBk" secondAttribute="bottom" id="fCt-5u-qqX"/>
+                                    <constraint firstItem="0GQ-lG-zBk" firstAttribute="leading" secondItem="dET-Km-j9n" secondAttribute="leading" id="jhb-hm-XSe"/>
+                                    <constraint firstItem="0GQ-lG-zBk" firstAttribute="height" secondItem="dET-Km-j9n" secondAttribute="height" id="nfF-sO-lWI"/>
+                                    <constraint firstAttribute="width" secondItem="dET-Km-j9n" secondAttribute="height" multiplier="1:1" id="wdx-Pa-aOy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Rw4-a5-ZRI" id="ylL-QM-TRq"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9QT-Bb-zdr"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dET-Km-j9n" firstAttribute="leading" secondItem="Bwl-i6-mKk" secondAttribute="leading" id="ewB-Fz-mcY"/>
+                            <constraint firstItem="dET-Km-j9n" firstAttribute="centerY" secondItem="Bwl-i6-mKk" secondAttribute="centerY" id="l3H-EF-ry2"/>
+                            <constraint firstAttribute="trailing" secondItem="dET-Km-j9n" secondAttribute="trailing" id="qwN-fZ-S1i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image" id="kA4-Nd-HTV"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="0GQ-lG-zBk" id="ch8-Rx-ghv"/>
+                        <outlet property="scrollView" destination="dET-Km-j9n" id="Xtt-FG-gid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZL-4J-3h6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="829.83508245877067"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="jellyfish_large" width="1280" height="960"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

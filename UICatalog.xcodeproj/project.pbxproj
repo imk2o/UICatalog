@@ -14,6 +14,7 @@
 		B1934C3724A1C99000A3FAE2 /* SearchMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3624A1C99000A3FAE2 /* SearchMenuViewController.swift */; };
 		B1934C3924A1C9B900A3FAE2 /* ModalSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3824A1C9B900A3FAE2 /* ModalSearchController.swift */; };
 		B1934C3B24A1D15900A3FAE2 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1934C3A24A1D15900A3FAE2 /* SearchResultsViewController.swift */; };
+		B1ADEE1C27B792C5005A6541 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ADEE1B27B792C5005A6541 /* ImageScrollViewController.swift */; };
 		B1D93F2524A058E700B9A16B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D93EC424A058E400B9A16B /* SearchViewController.swift */; };
 		B1D93F2624A058E700B9A16B /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D93EC524A058E400B9A16B /* SearchViewDataSource.swift */; };
 		B1D93F2724A058E700B9A16B /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D93EC724A058E400B9A16B /* Popover.storyboard */; };
@@ -115,6 +116,7 @@
 		B1934C3624A1C99000A3FAE2 /* SearchMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuViewController.swift; sourceTree = "<group>"; };
 		B1934C3824A1C9B900A3FAE2 /* ModalSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSearchController.swift; sourceTree = "<group>"; };
 		B1934C3A24A1D15900A3FAE2 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		B1ADEE1B27B792C5005A6541 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		B1D93EC424A058E400B9A16B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B1D93EC524A058E400B9A16B /* SearchViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
 		B1D93EC724A058E400B9A16B /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			children = (
 				B1D93F2424A058E700B9A16B /* BasicScrollViewController.swift */,
 				B1D93F8124A0594D00B9A16B /* ScrollView.storyboard */,
+				B1ADEE1B27B792C5005A6541 /* ImageScrollViewController.swift */,
 			);
 			path = ScrollView;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				B1D93F2E24A058E700B9A16B /* RoundedRectButton.swift in Sources */,
 				B1541FCE24A0575200B9E4C6 /* AppDelegate.swift in Sources */,
 				B1D93F4624A058E700B9A16B /* OuterTableViewCell.swift in Sources */,
+				B1ADEE1C27B792C5005A6541 /* ImageScrollViewController.swift in Sources */,
 				B1D93F4924A058E700B9A16B /* SelfSizingCellTableViewController.swift in Sources */,
 				B1D93F5524A058E700B9A16B /* CollectionViewFlowLayoutWithDecorations.swift in Sources */,
 				B1D93F2D24A058E700B9A16B /* ScrollPagingViewController.swift in Sources */,
