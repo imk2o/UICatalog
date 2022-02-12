@@ -154,7 +154,13 @@
                             <constraint firstAttribute="trailing" secondItem="dET-Km-j9n" secondAttribute="trailing" id="qwN-fZ-S1i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Image" id="kA4-Nd-HTV"/>
+                    <navigationItem key="navigationItem" title="Image" id="kA4-Nd-HTV">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="HFX-MU-1fI">
+                            <connections>
+                                <action selector="crop:" destination="Rw4-a5-ZRI" id="tOq-mW-89X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageView" destination="0GQ-lG-zBk" id="ch8-Rx-ghv"/>
@@ -168,6 +174,7 @@
     </scenes>
     <resources>
         <image name="jellyfish_large" width="1280" height="960"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
